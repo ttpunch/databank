@@ -6,7 +6,7 @@ dotenv.config({ path: '.env.local' });
 let cached = global.mongoose;
 
 if (!cached) {
-  cached = global.mongoose = { conn: null, promise: null };
+  cached = global.mongoose = { Types: null, conn: null, promise: null };
 }
 
 export async function connectToDatabase() {

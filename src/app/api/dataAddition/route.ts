@@ -34,7 +34,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Insert Areas and assign users
-    const areasWithOwnerIds = areas.map(area => ({
+    const areasWithOwnerIds = areas.map((area: any) => ({
       ...area,
       owner: user._id
     }));
@@ -46,7 +46,7 @@ export async function POST(request: NextRequest) {
     const oemMap = Object.fromEntries(insertedOEMs.map(oem => [oem.name, oem._id]));
 
     // Insert Machines and link to Areas & OEMs
-    const machinesWithRefs = machines.map(machine => ({
+    const machinesWithRefs = machines.map((machine) => ({
       ...machine,
       area: areaMap[machine.area] || null,
       oem: oemMap[machine.oem] || null
@@ -55,7 +55,7 @@ export async function POST(request: NextRequest) {
     const machineMap = Object.fromEntries(insertedMachines.map(machine => [machine.name, machine._id]));
 
     // Insert Parts and link to Machines
-    const partsWithRefs = parts.map(part => ({
+    const partsWithRefs = parts.map((part) => ({
       ...part,
       machine: machineMap[part.machine] || null
     }));

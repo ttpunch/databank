@@ -8,18 +8,17 @@ import { authOptions } from '@/app/lib/auth';
 export async function POST(req: NextRequest) {
   await connectToDatabase();
 
-    const session = await getServerSession(authOptions);
+  const session = await getServerSession(authOptions);
   if (!session) {
     return NextResponse.json({ message: 'Unauthorized' }, { status: 401 });
   }
 
   try {
-    const { name, country } = await req.json();
+    const { name } = await req.json();
     const user = await User.findOne({ email: session.user.email });
 
     const newOEM = new OEM({
       name,
-      country,
       addedBy: user._id,
     });
 
