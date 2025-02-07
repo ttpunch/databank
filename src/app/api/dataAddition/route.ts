@@ -10,8 +10,8 @@ import User from "@/app/models/User";
 
 export async function POST(request: NextRequest) {
   try {
-    await connectToDatabase();
-    const session = await getServerSession({ req: request, ...authOptions });
+    
+    const session = await getServerSession(authOptions );
 
     if (!session) {
       return NextResponse.json(
@@ -19,6 +19,7 @@ export async function POST(request: NextRequest) {
         { status: 401 }
       );
     }
+    await connectToDatabase();
 
     const { areas, oems, machines, parts } = await request.json();
     const userEmail = session.user.email;
