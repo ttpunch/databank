@@ -35,62 +35,64 @@ export default function Login() {
   };
 
   return (
-    <div className="max-w-md mx-auto p-4 bg-red-300">
-      <h1 className="text-2xl font-bold mb-4">Login</h1>
-      <form onSubmit={handleSubmit} className="space-y-4">
-        {/* Email Field */}
-        <div>
-          <label htmlFor="email" className="block mb-1">
-            Email
-          </label>
-          <input
-            type="email"
-            id="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-            className="w-full px-3 py-2 border rounded"
-          />
-        </div>
-
-        {/* Password Field */}
-        <div>
-          <label htmlFor="password" className="block mb-1">
-            Password
-          </label>
-          <input
-            type="password"
-            id="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-            className="w-full px-3 py-2 border rounded"
-          />
-        </div>
-
-        {/* Error Message */}
-        {error && (
-          <div className="text-red-500 text-sm">
-            {error}
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
+      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md transform transition-all duration-300 hover:scale-105">
+        <h1 className="text-3xl font-bold text-center text-gray-800 mb-6">Welcome Back</h1>
+        <form onSubmit={handleSubmit} className="space-y-6">
+          {/* Email Field */}
+          <div>
+            <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+              Email
+            </label>
+            <input
+              type="email"
+              id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300"
+            />
           </div>
-        )}
 
-        {/* Submit Button */}
-        <button
-          type="submit"
-          className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600"
-        >
-          Login
-        </button>
+          {/* Password Field */}
+          <div>
+            <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+              Password
+            </label>
+            <input
+              type="password"
+              id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+              className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300"
+            />
+          </div>
 
-        {/* Register Link */}
-        <p className="text-center mt-4">
-          Don&apos;t have an account?{" "}
-          <Link href="/register" className="text-blue-500 hover:text-blue-600">
-            Register
-          </Link>
-        </p>
-      </form>
+          {/* Error Message */}
+          {error && (
+            <div className="text-red-500 text-sm text-center">
+              {error}
+            </div>
+          )}
+
+          {/* Submit Button */}
+          <button
+            type="submit"
+            className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition duration-300"
+          >
+            Login
+          </button>
+
+          {/* Register Link */}
+          <p className="text-center text-sm text-gray-600">
+            Don&apos;t have an account?{" "}
+            <Link href="/register" className="text-blue-600 hover:text-blue-700 font-medium">
+              Register
+            </Link>
+          </p>
+        </form>
+      </div>
     </div>
   );
 }
