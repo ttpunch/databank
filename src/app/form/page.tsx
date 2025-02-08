@@ -36,7 +36,7 @@ export default function AddDataForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch("/api/add-data", {
+    const response = await fetch("/api/dataaddition", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
