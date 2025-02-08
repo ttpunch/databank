@@ -8,22 +8,23 @@ export default withAuth(
   {
     callbacks: {
       authorized: ({ token, req }) => {
-        const { pathname } = req.nextUrl;
+        const pathname = req.nextUrl.pathname;
 
-        // Allow auth-related routes
+        // Allow authentication-related routes
         if (
-          pathname.startsWith("/api/auth") ||
-          pathname === "/login" ||
+          pathname.includes("/api/auth") || // Allow NextAuth API routes
+          pathname === "/login" || 
           pathname === "/register"
         ) {
           return true;
         }
 
-        // Public routes
-        if (pathname === "/" || pathname.startsWith("/api/videos")) {
+        // Public routes (e.g., homepage & API videos)
+        if (pathname === "/" || pathname.startsWith("/api/")) {
           return true;
         }
-        // All other routes require authentication
+
+        // Require authentication for everything else
         return !!token;
       },
     },
@@ -34,11 +35,10 @@ export const config = {
   matcher: [
     /*
      * Match all request paths except:
-     * - _next/static (static files)
-     * - _next/image (image optimization files)
-     * - favicon.ico (favicon file)
-     * - public folder
+     * - _next/static/* (static files)
+     * - _next/image/* (image optimization)
+     * - favicon.ico (favicon)
      */
-    "/((?!_next/static|_next/image|favicon.ico|public/).*)",
+    "/((?!_next/static|_next/image|favicon.ico|api/).*)",
   ],
 };

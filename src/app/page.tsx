@@ -1,111 +1,76 @@
-"use client"
-import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Card, CardContent } from "@/components/ui/card";
-import { Label } from "@/components/ui/label";
-import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
-import { useRouter } from "next/navigation";
+"use client";
 
-export default function AddDataForm() {
-  const router = useRouter();
-  const [formData, setFormData] = useState({
-    area: "",
-    machine: "",
-    machineNo: "",
-    oem: "",
-    partNo: "",
-    partDetail: "",
-    installedQuantity: "",
-    availableQuantity: ""
-  });
-  const [user, setUser] = useState(null);
+import { useSession, signIn, signOut } from "next-auth/react";
+import { Button } from "@/components/ui/button";
+import { useEffect, useState } from "react";
+import axios from "axios";
+
+export default function Home() {
+  const { data: session, status } = useSession();
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    async function fetchUser() {
-      const res = await fetch("/api/auth/session");
-      const data = await res.json();
-      if (data?.user) setUser(data.user);
+    if (session) {
+      axios.get("/api/dataaddition")
+        .then((res) => {
+          setData(res.data);
+        })
+        .catch((err) => console.error("Error fetching data:", err))
+        .finally(() => setLoading(false));
+    } else {
+      setLoading(false);
     }
-    fetchUser();
-  }, []);
+  }, [session]);
 
-  const handleChange = (field, value) => {
-    setFormData((prev) => ({ ...prev, [field]: value }));
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const response = await fetch("/api/add-data", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
-    });
-    if (response.ok) {
-      router.refresh();
-    }
-  };
+  if (status === "loading" || loading) return <p className="text-center mt-10">Loading...</p>;
 
   return (
-    <div className="relative bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 min-h-screen flex items-center justify-center p-6">
-      {user && (
-        <div className="absolute top-4 right-4 bg-white p-3 rounded-md shadow-lg">
-          <p className="text-sm font-semibold text-gray-700">{user.name}</p>
-          <p className="text-xs text-gray-500">{user.email}</p>
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-900 text-white p-6">
+      {!session ? (
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">Welcome to CNC Management</h1>
+          <p className="mb-6 text-gray-300">Manage your Areas, Machines, OEMs, and Parts.</p>
+          <Button onClick={() => signIn()} className="bg-blue-500 hover:bg-blue-600">
+            Login
+          </Button>
+        </div>
+      ) : (
+        <div className="w-full max-w-4xl">
+          <div className="flex justify-between items-center mb-6">
+            <h1 className="text-3xl font-bold">Dashboard</h1>
+            <Button onClick={() => signOut()} className="bg-red-500 hover:bg-red-600">Logout</Button>
+          </div>
+
+          <div className="space-y-6">
+            {data ? (
+              <>
+                <Section title="Areas" items={data.areas} />
+                <Section title="Machines" items={data.machines} />
+                <Section title="OEMs" items={data.oems} />
+                <Section title="Parts" items={data.parts} />
+              </>
+            ) : (
+              <p className="text-gray-400">No data found.</p>
+            )}
+          </div>
         </div>
       )}
-      <Card className="max-w-3xl w-full p-8 shadow-2xl rounded-xl bg-white">
-        <CardContent>
-          <h2 className="text-2xl font-bold mb-6 text-gray-800 text-center">Add Data</h2>
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div>
-              <Label className="text-gray-700">Area</Label>
-              <Select value={formData.area} onValueChange={(value) => handleChange("area", value)}>
-                <SelectTrigger className="bg-gray-100 border-gray-300">
-                  <SelectValue placeholder="Select Area" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="EM-FBM-DABG">EM-FBM-DABG</SelectItem>
-                  <SelectItem value="TURBINE">TURBINE</SelectItem>
-                  <SelectItem value="NBS">NBS</SelectItem>
-                  <SelectItem value="CNCLAB">CNCLAB</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-            <div className="grid grid-cols-2 gap-4">
-              <div>
-                <Label className="text-gray-700">Machine</Label>
-                <Input className="bg-gray-100" value={formData.machine} onChange={(e) => handleChange("machine", e.target.value)} />
-              </div>
-              <div>
-                <Label className="text-gray-700">Machine No.</Label>
-                <Input className="bg-gray-100" value={formData.machineNo} onChange={(e) => handleChange("machineNo", e.target.value)} />
-              </div>
-            </div>
-            <div>
-              <Label className="text-gray-700">OEM</Label>
-              <Input className="bg-gray-100" value={formData.oem} onChange={(e) => handleChange("oem", e.target.value)} />
-            </div>
-            <div>
-              <Label className="text-gray-700">Part No.</Label>
-              <Input className="bg-gray-100" value={formData.partNo} onChange={(e) => handleChange("partNo", e.target.value)} />
-            </div>
-            <div>
-              <Label className="text-gray-700">Part Detail</Label>
-              <Input className="bg-gray-100" value={formData.partDetail} onChange={(e) => handleChange("partDetail", e.target.value)} />
-            </div>
-            <div>
-              <Label className="text-gray-700">Installed Quantity</Label>
-              <Input className="bg-gray-100" value={formData.installedQuantity} onChange={(e) => handleChange("installedQuantity", e.target.value)} />
-            </div>
-            <div>
-              <Label className="text-gray-700">Available Quantity</Label>
-              <Input className="bg-gray-100" value={formData.availableQuantity} onChange={(e) => handleChange("availableQuantity", e.target.value)} />
-            </div>
-            <Button type="submit" className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 rounded-md shadow-md transition">Submit</Button>
-          </form>
-        </CardContent>
-      </Card>
     </div>
   );
 }
+
+const Section = ({ title, items }: { title: string; items: any[] }) => (
+  <div className="bg-gray-800 p-4 rounded-lg shadow-lg">
+    <h2 className="text-2xl font-semibold mb-3">{title}</h2>
+    {items.length > 0 ? (
+      <ul className="list-disc pl-5 space-y-2">
+        {items.map((item, index) => (
+          <li key={index} className="text-gray-300">{JSON.stringify(item)}</li>
+        ))}
+      </ul>
+    ) : (
+      <p className="text-gray-400">No {title.toLowerCase()} available.</p>
+    )}
+  </div>
+);

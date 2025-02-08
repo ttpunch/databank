@@ -2,74 +2,61 @@ import { NextRequest, NextResponse } from "next/server";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/app/lib/auth";
 import { connectToDatabase } from "@/app/lib/db";
-import Area from "@/app/models/Area";
-import OEM from "@/app/models/Oem";
-import Machine from "@/app/models/Machine";
-import Part from "@/app/models/Part";
-import User from "@/app/models/User";
+import Area from "@/app/modelNew/Area";
+import Machine from "@/app/modelNew/Machine";
+import OEM from "@/app/modelNew/OEM";
+import Part from "@/app/modelNew/Part";
+import User from "@/app/modelNew/User";
 
 export async function POST(request: NextRequest) {
   try {
-    
-    const session = await getServerSession(authOptions );
+    const session = await getServerSession(authOptions);
 
     if (!session) {
-      return NextResponse.json(
-        { error: "Unauthorized" },
-        { status: 401 }
-      );
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
+
     await connectToDatabase();
+    const { area, machine, machineNo, oem, partNo, partDetail, installedQuantity, availableQuantity } = await request.json();
 
-    const { areas, oems, machines, parts } = await request.json();
     const userEmail = session.user.email;
-
-    // Find the user from the session
     const user = await User.findOne({ email: userEmail });
     if (!user) {
-      return NextResponse.json(
-        { error: "User not found" },
-        { status: 404 }
-      );
+      return NextResponse.json({ error: "User not found" }, { status: 404 });
     }
 
-    // Insert Areas and assign users
-    const areasWithOwnerIds = areas.map((area: any) => ({
-      ...area,
-      owner: user._id
-    }));
-    const insertedAreas = await Area.insertMany(areasWithOwnerIds);
-    const areaMap = Object.fromEntries(insertedAreas.map(area => [area.name, area._id]));
+    // 🔹 Find or Create Area
+    let areaDoc = await Area.findOne({ name: area });
+    if (!areaDoc) {
+      areaDoc = await Area.create({ name: area });
+    }
 
-    // Insert OEMs
-    const insertedOEMs = await OEM.insertMany(oems);
-    const oemMap = Object.fromEntries(insertedOEMs.map(oem => [oem.name, oem._id]));
+    // 🔹 Find or Create Machine
+    let machineDoc = await Machine.findOne({ name: machine, machineNo, area: areaDoc._id });
+    if (!machineDoc) {
+      machineDoc = await Machine.create({ name: machine, machineNo, area: areaDoc._id });
+    }
 
-    // Insert Machines and link to Areas & OEMs
-    const machinesWithRefs = machines.map((machine) => ({
-      ...machine,
-      area: areaMap[machine.area] || null,
-      oem: oemMap[machine.oem] || null
-    }));
-    const insertedMachines = await Machine.insertMany(machinesWithRefs);
-    const machineMap = Object.fromEntries(insertedMachines.map(machine => [machine.name, machine._id]));
+    // 🔹 Find or Create OEM
+    let oemDoc = await OEM.findOne({ name: oem });
+    if (!oemDoc) {
+      oemDoc = await OEM.create({ name: oem });
+    }
 
-    // Insert Parts and link to Machines
-    const partsWithRefs = parts.map((part) => ({
-      ...part,
-      machine: machineMap[part.machine] || null
-    }));
-    await Part.insertMany(partsWithRefs);
+    // 🔹 Insert Part
+    const part = await Part.create({
+      machine: machineDoc._id,
+      OEM: oemDoc._id,
+      partNo,
+      partDetail,
+      installedQuantity,
+      availableQuantity
+    });
 
-    return NextResponse.json(
-      { message: "Data inserted successfully" },
-      { status: 201 }
-    );
+    return NextResponse.json({ message: "Part added successfully", part }, { status: 201 });
+
   } catch (error) {
     console.error("Data insertion error:", error);
-    return NextResponse.json(
-      { error: "Failed to insert data" },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: "Failed to insert data" }, { status: 500 });
   }
 }

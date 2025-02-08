@@ -1,8 +1,8 @@
 import { NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcryptjs";
-import { connectToDatabase } from "./db";
-import UserModel from "../models/User";
+import { connectToDatabase } from "@/app/lib/db";
+import UserModel from "@/app/modelNew/User";
 
 export const authOptions: NextAuthOptions = {
   providers: [
@@ -17,33 +17,15 @@ export const authOptions: NextAuthOptions = {
           throw new Error("Missing email or password");
         }
 
-        try {
-          await connectToDatabase();
-          const user = await UserModel.findOne({ email: credentials.email });
+        await connectToDatabase();
+        const user = await UserModel.findOne({ email: credentials.email });
 
-          if (!user) {
-            throw new Error("No user found with this email");
-          }
+        if (!user) throw new Error("No user found");
 
-          const isValid = await bcrypt.compare(
-            credentials.password,
-            user.password
-          );
+        const isValid = await bcrypt.compare(credentials.password, user.password);
+        if (!isValid) throw new Error("Invalid password");
 
-          if (!isValid) {
-            throw new Error("Invalid password");
-          }
-
-          return {
-            id: user._id.toString(),
-            email: user.email,
-            name: user.name,
-            role: user.role, // Ensure role is returned
-          };
-        } catch (error) {
-          console.error("Auth error:", error);
-          throw error;
-        }
+        return { id: user._id.toString(), email: user.email, name: user.name, role: user.role };
       },
     }),
   ],
@@ -51,27 +33,19 @@ export const authOptions: NextAuthOptions = {
     async jwt({ token, user }) {
       if (user) {
         token.id = user.id;
-          
+        token.role = user.role; // Ensure role is stored
       }
       return token;
     },
     async session({ session, token }) {
       if (session.user) {
         session.user.id = token.id as string;
-        session.user.email = token.email as string;
-        session.user.name = token.name as string;
-        session.user.role = token.role as string; // Include role in session
+        session.user.role = token.role as string;
       }
       return session;
     },
   },
-  pages: {
-    signIn: "/login",
-    error: "/login",
-  },
-  session: {
-    strategy: "jwt",
-    maxAge: 30 * 24 * 60 * 60,
-  },
+  pages: { signIn: "/login" },
+  session: { strategy: "jwt", maxAge: 30 * 24 * 60 * 60 },
   secret: process.env.NEXTAUTH_SECRET,
 };

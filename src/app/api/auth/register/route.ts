@@ -1,12 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
 import { connectToDatabase } from "@/app/lib/db";
-import User from "@/app/models/User";
+import User from "@/app/modelNew/User";
 import bcrypt from "bcryptjs";
 
 export async function POST(request: NextRequest) {
   try {
     const { name, email, password, role, areas } = await request.json();
 
+    // 🔹 Basic Validations
     if (!name || !email || !password || !role) {
       return NextResponse.json(
         { error: "Name, email, password, and role are required" },
@@ -14,10 +15,33 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // 🔹 Email Format Validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return NextResponse.json({ error: "Invalid email format" }, { status: 400 });
+    }
+
+    // 🔹 Role Validation (Example roles: "admin", "user", "operator")
+    const allowedRoles = ["admin", "user", "operator"];
+    if (!allowedRoles.includes(role)) {
+      return NextResponse.json(
+        { error: `Invalid role. Allowed roles: ${allowedRoles.join(", ")}` },
+        { status: 400 }
+      );
+    }
+
+    // 🔹 Password Strength Validation
+    if (password.length < 8) {
+      return NextResponse.json(
+        { error: "Password must be at least 8 characters long" },
+        { status: 400 }
+      );
+    }
+
     await connectToDatabase();
 
-    // Check if user already exists
-    const existingUser = await User.findOne({ email });
+    // 🔹 Check if user already exists
+    const existingUser = await User.findOne({ email: email.toLowerCase() }).lean();
     if (existingUser) {
       return NextResponse.json(
         { error: "Email already registered" },
@@ -25,16 +49,16 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Hash password
+    // 🔹 Hash Password
     const hashedPassword = await bcrypt.hash(password, 10);
 
-    // Create new user
+    // 🔹 Create New User
     const newUser = await User.create({
       name,
-      email,
+      email: email.toLowerCase(), // Normalize email storage
       password: hashedPassword,
       role,
-      areas: areas || [], // Assign areas if provided
+      areas: Array.isArray(areas) ? areas : [], // Ensure areas is an array
     });
 
     return NextResponse.json(
