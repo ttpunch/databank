@@ -22,7 +22,7 @@ export async function POST(request: NextRequest) {
     }
 
     // 🔹 Role Validation (Example roles: "admin", "user", "operator")
-    const allowedRoles = ["admin", "user", "operator"];
+    const allowedRoles = ["admin", "user"];
     if (!allowedRoles.includes(role)) {
       return NextResponse.json(
         { error: `Invalid role. Allowed roles: ${allowedRoles.join(", ")}` },
