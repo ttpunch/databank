@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -25,18 +25,19 @@ export default function AddDataForm() {
     async function fetchUser() {
       const res = await fetch("/api/auth/session");
       const data = await res.json();
+      console.log(data)
       if (data?.user) setUser(data.user);
     }
     fetchUser();
   }, []);
 
-  const handleChange = (field, value) => {
+  const handleChange = (field:any, value:any) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e:any) => {
     e.preventDefault();
-    const response = await fetch("/api/dataaddition", {
+    const response = await fetch("/api/dataAddition", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
@@ -47,14 +48,14 @@ export default function AddDataForm() {
   };
 
   return (
-    <div className="relative bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 min-h-screen flex items-center justify-center p-6">
+    <div className="relative flex items-center justify-center p-6 container mx-auto mt-10">
       {user && (
         <div className="absolute top-4 right-4 bg-white p-3 rounded-md shadow-lg">
           <p className="text-sm font-semibold text-gray-700">{user.name}</p>
           <p className="text-xs text-gray-500">{user.email}</p>
         </div>
       )}
-      <Card className="max-w-3xl w-full p-8 shadow-2xl rounded-xl bg-white">
+      <Card className="max-w-lg w-full p-8 shadow-2xl rounded-xl bg-white">
         <CardContent>
           <h2 className="text-2xl font-bold mb-6 text-gray-800 text-center">Add Data</h2>
           <form onSubmit={handleSubmit} className="space-y-4">

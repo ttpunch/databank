@@ -4,15 +4,16 @@ import { useSession, signIn, signOut } from "next-auth/react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import ModalDrawer from "@/components/ui/modalDrawer";
 
 export default function Home() {
   const { data: session, status } = useSession();
-  const [data, setData] = useState<any>(null);
+  const [data, setData] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     if (session) {
-      axios.get("/api/dataaddition")
+      axios.get("/api/dataAddition")
         .then((res) => {
           setData(res.data);
         })
@@ -26,51 +27,51 @@ export default function Home() {
   if (status === "loading" || loading) return <p className="text-center mt-10">Loading...</p>;
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-900 text-white p-6">
+    <div className="min-h-screen flex flex-col items-center bg-gray-900 text-white p-6">
       {!session ? (
-        <div className="text-center">
+        <div className="text-center mt-16"> {/* Added margin from the top */}
           <h1 className="text-4xl font-bold mb-4">Welcome to CNC Management</h1>
           <p className="mb-6 text-gray-300">Manage your Areas, Machines, OEMs, and Parts.</p>
-          <Button onClick={() => signIn()} className="bg-blue-500 hover:bg-blue-600">
-            Login
-          </Button>
+          <Button onClick={() => signIn()}>Sign In</Button>
         </div>
       ) : (
-        <div className="w-full max-w-4xl">
-          <div className="flex justify-between items-center mb-6">
-            <h1 className="text-3xl font-bold">Dashboard</h1>
-            <Button onClick={() => signOut()} className="bg-red-500 hover:bg-red-600">Logout</Button>
+        <div className="w-full max-w-4xl mt-16 mb-8"> {/* Added margin from the top */}
+          <div className="flex justify-between items-center mb-4 space-x-4">
+            <h1 className="text-4xl font-bold">Parts List</h1>
+            <ModalDrawer />
           </div>
-
-          <div className="space-y-6">
-            {data ? (
-              <>
-                <Section title="Areas" items={data.areas} />
-                <Section title="Machines" items={data.machines} />
-                <Section title="OEMs" items={data.oems} />
-                <Section title="Parts" items={data.parts} />
-              </>
-            ) : (
-              <p className="text-gray-400">No data found.</p>
-            )}
-          </div>
+          <table className="min-w-full bg-white text-gray-900">
+            <thead>
+              <tr>
+                <th className="py-2 px-4 border-b">Part No</th>
+                <th className="py-2 px-4 border-b">Part Detail</th>
+                <th className="py-2 px-4 border-b">Machine</th>
+                <th className="py-2 px-4 border-b">OEM</th>
+                <th className="py-2 px-4 border-b">Installed Quantity</th>
+                <th className="py-2 px-4 border-b">Available Quantity</th>
+              </tr>
+            </thead>
+            <tbody>
+              {data.length > 0 ? (
+                data.map((part) => (
+                  <tr key={part._id}>
+                    <td className="py-2 px-4 border-b">{part.partNo}</td>
+                    <td className="py-2 px-4 border-b">{part.partDetail}</td>
+                    <td className="py-2 px-4 border-b">{part.machine.name}</td>
+                    <td className="py-2 px-4 border-b">{part.OEM.name}</td>
+                    <td className="py-2 px-4 border-b">{part.installedQuantity}</td>
+                    <td className="py-2 px-4 border-b">{part.availableQuantity}</td>
+                  </tr>
+                ))
+              ) : (
+                <tr>
+                  <td colSpan={6} className="py-2 px-4 border-b text-center">No data available</td>
+                </tr>
+              )}
+            </tbody>
+          </table>
         </div>
       )}
     </div>
   );
 }
-
-const Section = ({ title, items }: { title: string; items: any[] }) => (
-  <div className="bg-gray-800 p-4 rounded-lg shadow-lg">
-    <h2 className="text-2xl font-semibold mb-3">{title}</h2>
-    {items.length > 0 ? (
-      <ul className="list-disc pl-5 space-y-2">
-        {items.map((item, index) => (
-          <li key={index} className="text-gray-300">{JSON.stringify(item)}</li>
-        ))}
-      </ul>
-    ) : (
-      <p className="text-gray-400">No {title.toLowerCase()} available.</p>
-    )}
-  </div>
-);
