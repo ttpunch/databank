@@ -44,7 +44,7 @@ export async function GET(request: NextRequest) {
 
 async function parseFileContent(file: File): Promise<any[]> {
   const buffer = await file.arrayBuffer();
-  const fileType = ALLOWED_FILE_TYPES[file.type];
+  const fileType = ALLOWED_FILE_TYPES[file.type as keyof typeof ALLOWED_FILE_TYPES];
 
   if (fileType === 'csv') {
     const text = new TextDecoder().decode(buffer);
@@ -80,7 +80,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "No file uploaded" }, { status: 400 });
     }
 
-    if (!ALLOWED_FILE_TYPES[file.type]) {
+    if (!ALLOWED_FILE_TYPES[file.type as keyof typeof ALLOWED_FILE_TYPES]) {
       return NextResponse.json({
         error: "Invalid file type",
         allowedTypes: Object.keys(ALLOWED_FILE_TYPES)
