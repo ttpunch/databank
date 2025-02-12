@@ -11,6 +11,7 @@ import User from "@/app/modelNew/User";
 export async function POST(request: NextRequest) {
   try {
     const session = await getServerSession(authOptions);
+    console.log(session)
 
     if (!session) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -70,10 +71,63 @@ export async function GET(request: NextRequest) {
     }
 
     await connectToDatabase();
-    const parts = await Part.find()
-      .populate('machine')
-      .populate('OEM')
-      .exec();
+    const parts = await Part.aggregate([
+      {
+        $lookup: {
+          from: Machine.collection.name, // Use the collection name from the Machine model
+          localField: 'machine', // Field in the Part collection
+          foreignField: '_id', // Field in the machines collection
+          as: 'machineDetails',
+        },
+      },
+      {
+        $lookup: {
+          from: OEM.collection.name, // Use the collection name from the OEM model
+          localField: 'OEM', // Field in the Part collection
+          foreignField: '_id', // Field in the oems collection
+          as: 'oemDetails',
+        },
+      },
+      {
+        $unwind: {
+          path: '$machineDetails',
+          preserveNullAndEmptyArrays: true, // Keep parts even if no machine details
+        },
+      },
+      {
+        $unwind: {
+          path: '$oemDetails',
+          preserveNullAndEmptyArrays: true, // Keep parts even if no OEM details
+        },
+      },
+      {
+        $project: {
+          _id: 1,
+          machine: {
+            _id: '$machineDetails._id',
+            name: '$machineDetails.name',
+            machineNo: '$machineDetails.machineNo',
+            area: '$machineDetails.area',
+            createdAt: '$machineDetails.createdAt',
+            updatedAt: '$machineDetails.updatedAt',
+            __v: '$machineDetails.__v',
+          },
+          OEM: {
+            _id: '$oemDetails._id',
+            name: '$oemDetails.name',
+            createdAt: '$oemDetails.createdAt',
+            updatedAt: '$oemDetails.updatedAt',
+            __v: '$oemDetails.__v',
+          },
+          partNo: 1,
+          partDetail: 1,
+          installedQuantity: 1,
+          availableQuantity: 1,
+          createdAt: 1,
+          updatedAt: 1,
+        },
+      },
+    ]).exec();
 
     return NextResponse.json(parts, { status: 200 });
   } catch (error) {

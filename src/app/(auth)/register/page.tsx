@@ -1,5 +1,6 @@
 "use client";
 
+import { signIn } from "next-auth/react";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
@@ -40,9 +41,11 @@ export default function Register() {
     };
 
     return (
-        <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 p-4">
-            <div className="w-full max-w-md bg-white shadow-lg rounded-2xl p-6">
-                <h1 className="text-3xl font-bold text-center mb-6 text-gray-800">Create Account</h1>
+        <div className="flex items-center justify-center min-h-screen bg-gray-900 text-white">
+            <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md transform transition-all duration-300 hover:scale-105">
+                <h1 className="text-3xl font-bold text-center mb-6 bg-gradient-to-r from-blue-500 to-purple-600 text-transparent bg-clip-text animate-gradient">
+                    Create Account
+                </h1>
                 <form onSubmit={handleSubmit} className="space-y-4">
                     <div>
                         <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
@@ -107,7 +110,7 @@ export default function Register() {
                     </div>
                     <button
                         type="submit"
-                        className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition-colors"
+                        className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-2 rounded-lg hover:bg-gradient-to-l transition-colors duration-200"
                     >
                         Register
                     </button>

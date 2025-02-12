@@ -1,6 +1,6 @@
 "use client";
 
-import { signIn,signOut } from "next-auth/react";
+import { signIn } from "next-auth/react";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
@@ -9,6 +9,7 @@ export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null); // State to handle login errors
+  const [loading, setLoading] = useState(false); // State for loading
   const router = useRouter();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -16,6 +17,7 @@ export default function Login() {
 
     // Reset error state
     setError(null);
+    setLoading(true); // Set loading to true when submitting
 
     // Attempt to sign in
     const result = await signIn("credentials", {
@@ -32,12 +34,16 @@ export default function Login() {
       // If login is successful, redirect to the home page
       router.push("/");
     }
+
+    setLoading(false); // Reset loading state after processing
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
+    <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white">
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md transform transition-all duration-300 hover:scale-105">
-        <h1 className="text-3xl font-bold text-center text-gray-800 mb-6">Welcome Back</h1>
+        <h1 className="text-3xl font-bold text-center text-gray-800 mb-6 bg-gradient-to-r from-blue-500 to-purple-600 text-transparent bg-clip-text animate-gradient">
+          Welcome Back
+        </h1>
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Email Field */}
           <div>
@@ -50,7 +56,7 @@ export default function Login() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300"
+              className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300 text-gray-800" // Changed text color to dark gray
             />
           </div>
 
@@ -65,7 +71,7 @@ export default function Login() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
-              className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300"
+              className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300 text-gray-800" // Changed text color to dark gray
             />
           </div>
 
@@ -79,9 +85,10 @@ export default function Login() {
           {/* Submit Button */}
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition duration-300"
+            className={`w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-2 rounded-md hover:bg-gradient-to-l transition-colors duration-200 ${loading ? "opacity-50 cursor-not-allowed" : ""}`} // Disable button during loading
+            disabled={loading} // Disable button when loading
           >
-            Login
+            {loading ? "Loading..." : "Login"} {/* Show loading text when in loading state */}
           </button>
 
           {/* Register Link */}

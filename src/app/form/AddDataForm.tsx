@@ -6,6 +6,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
 import { useRouter } from "next/navigation";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function AddDataForm() {
   const router = useRouter();
@@ -37,12 +39,13 @@ export default function AddDataForm() {
 
   const handleSubmit = async (e:any) => {
     e.preventDefault();
-    const response = await fetch("/api/dataAddition", {
+    const response = await fetch("/api/dataaddition", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
     });
     if (response.ok) {
+      toast.success("Data submitted successfully!");
       router.refresh();
     }
   };
@@ -107,6 +110,16 @@ export default function AddDataForm() {
           </form>
         </CardContent>
       </Card>
+      <ToastContainer 
+  position="bottom-right" // Set position to bottom-right
+  autoClose={5000} // Optional: Auto close after 5 seconds
+  hideProgressBar={false} // Optional: Show progress bar
+  newestOnTop={false} // Optional: Show newest on top
+  closeOnClick // Optional: Close on click
+  pauseOnHover // Optional: Pause on hover
+  draggable // Optional: Allow dragging
+  pauseOnFocusLoss // Optional: Pause on focus loss
+/>
     </div>
   );
 }
