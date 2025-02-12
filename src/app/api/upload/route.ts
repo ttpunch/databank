@@ -10,10 +10,6 @@ import User from "@/app/modelNew/User";
 import * as XLSX from 'xlsx';
 import { z } from 'zod';
 import { parse as csvParse } from 'csv-parse/sync';
-import { EventEmitter } from 'events';
-
-// Create a global event emitter for progress updates
-const progressEmitter = new EventEmitter();
 
 // Schema matching your existing database structure
 const RowSchema = z.object({
@@ -35,7 +31,6 @@ const ALLOWED_FILE_TYPES = {
   'application/csv': 'csv'
 };
 
-// Progress tracking endpoint
 export async function GET(request: NextRequest) {
   const uploadId = request.nextUrl.searchParams.get('uploadId');
   
@@ -43,28 +38,8 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ error: "Upload ID required" }, { status: 400 });
   }
 
-  const encoder = new TextEncoder();
-  const stream = new ReadableStream({
-    start(controller) {
-      const sendProgress = (progress: any) => {
-        const data = encoder.encode(`data: ${JSON.stringify(progress)}\n\n`);
-        controller.enqueue(data);
-      };
-
-      progressEmitter.on(`progress:${uploadId}`, sendProgress);
-      request.signal.addEventListener('abort', () => {
-        progressEmitter.removeListener(`progress:${uploadId}`, sendProgress);
-      });
-    }
-  });
-
-  return new NextResponse(stream, {
-    headers: {
-      'Content-Type': 'text/event-stream',
-      'Cache-Control': 'no-cache',
-      'Connection': 'keep-alive'
-    }
-  });
+  // The GET function logic without progress tracking
+  return NextResponse.json({ message: "Progress tracking removed" }, { status: 200 });
 }
 
 async function parseFileContent(file: File): Promise<any[]> {
@@ -86,10 +61,6 @@ async function parseFileContent(file: File): Promise<any[]> {
 }
 
 export async function POST(request: NextRequest) {
-  const uploadId = crypto.randomUUID();
-  let currentBatch = 0;
-  let totalBatches = 0;
-
   try {
     const session = await getServerSession(authOptions);
     if (!session) {
@@ -118,20 +89,6 @@ export async function POST(request: NextRequest) {
 
     await connectToDatabase();
     const rawData = await parseFileContent(file);
-    totalBatches = Math.ceil(rawData.length / BATCH_SIZE);
-
-    // Emit initial progress
-    progressEmitter.emit(`progress:${uploadId}`, {
-      status: 'started',
-      total: rawData.length,
-      processed: 0,
-      successful: 0,
-      failed: 0,
-      currentBatch: 0,
-      totalBatches,
-      percentage: 0
-    });
-
     const results = {
       successful: 0,
       failed: 0,
@@ -141,9 +98,7 @@ export async function POST(request: NextRequest) {
 
     // Process in batches
     for (let i = 0; i < rawData.length; i += BATCH_SIZE) {
-      currentBatch++;
       const batch = rawData.slice(i, i + BATCH_SIZE);
-      const batchStartTime = Date.now();
       
       const batchPromises = batch.map(async (row, rowIndex) => {
         try {
@@ -209,42 +164,10 @@ export async function POST(request: NextRequest) {
       });
 
       await Promise.all(batchPromises);
-
-      // Calculate and emit progress
-      const processed = Math.min(i + BATCH_SIZE, rawData.length);
-      const percentage = Math.round((processed / rawData.length) * 100);
-      const batchProcessingTime = Date.now() - batchStartTime;
-      
-      progressEmitter.emit(`progress:${uploadId}`, {
-        status: 'processing',
-        total: rawData.length,
-        processed,
-        successful: results.successful,
-        failed: results.failed,
-        currentBatch,
-        totalBatches,
-        percentage,
-        batchProcessingTime,
-        estimatedTimeRemaining: 
-          Math.round(batchProcessingTime * (totalBatches - currentBatch) / 1000)
-      });
     }
-
-    // Emit completion status
-    progressEmitter.emit(`progress:${uploadId}`, {
-      status: 'completed',
-      total: rawData.length,
-      processed: rawData.length,
-      successful: results.successful,
-      failed: results.failed,
-      currentBatch,
-      totalBatches,
-      percentage: 100
-    });
 
     return NextResponse.json({
       message: "File processing completed",
-      uploadId,
       summary: {
         totalRows: rawData.length,
         successfullyProcessed: results.successful,
@@ -270,10 +193,5 @@ export async function POST(request: NextRequest) {
     }
   }
 }
-const handleError = (error: unknown) => {
-    if (error instanceof Error) {
-        console.error(error.message); // Now TypeScript knows 'error' is an Error
-    } else {
-        console.error('An unknown error occurred');
-    }
-};
+
+// Removed handleError function as it is no longer needed
