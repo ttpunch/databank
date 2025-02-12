@@ -20,9 +20,7 @@ export default function ModalDrawer() {
           <DrawerTitle>Add Data Form</DrawerTitle>
         </VisuallyHidden>
         <AddDataForm />
-        <div className="mt-4">
-          <Button onClick={() => signOut()} className="bg-red-500 text-white rounded-md hover:bg-red-600 transition duration-200">Sign Out</Button>
-        </div>
+        
         <Button onClick={() => setIsOpen(false)} className=" mt-4 bg-red-400 text-white rounded-md hover:bg-gray-600 transition duration-200 ">Close</Button>
       </DrawerContent>
     </Drawer>

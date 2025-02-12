@@ -8,6 +8,7 @@ import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@
 import { useRouter } from "next/navigation";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { signOut } from "next-auth/react";
 
 interface User {
   name: string;
@@ -32,17 +33,17 @@ export default function AddDataForm() {
     async function fetchUser() {
       const res = await fetch("/api/auth/session");
       const data = await res.json();
-      console.log(data)
+      console.log(data);
       if (data?.user) setUser(data.user);
     }
     fetchUser();
   }, []);
 
-  const handleChange = (field:any, value:any) => {
+  const handleChange = (field: string, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
-  const handleSubmit = async (e:any) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const response = await fetch("/api/dataaddition", {
       method: "POST",
@@ -56,16 +57,17 @@ export default function AddDataForm() {
   };
 
   return (
-    <div className="relative flex items-center justify-center p-6 container mx-auto mt-10">
+    <div className="relative flex items-center justify-center p-4 container mx-auto mt-10">
       {user && (
-        <div className="absolute top-4 right-4 bg-white p-3 rounded-md shadow-lg">
+        <div className="absolute top-4 right-4 bg-white p-2 rounded-md shadow-lg hidden md:block"> {/* Hide on mobile */}
           <p className="text-sm font-semibold text-gray-700">{user.name}</p>
           <p className="text-xs text-gray-500">{user.email}</p>
+          <Button onClick={() => signOut()} className="mt-2">Sign Out</Button> {/* Add sign-out button */}
         </div>
       )}
-      <Card className="max-w-lg w-full p-8 shadow-2xl rounded-xl bg-white">
+      <Card className="max-w-lg w-full p-6 shadow-2xl rounded-xl bg-white">
         <CardContent>
-          <h2 className="text-2xl font-bold mb-6 text-gray-800 text-center">Add Data</h2>
+          <h2 className="text-xl font-bold mb-4 text-gray-800 text-center">Add Data</h2>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <Label className="text-gray-700">Area</Label>
@@ -81,7 +83,7 @@ export default function AddDataForm() {
                 </SelectContent>
               </Select>
             </div>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
               <div>
                 <Label className="text-gray-700">Machine</Label>
                 <Input className="bg-gray-100" value={formData.machine} onChange={(e) => handleChange("machine", e.target.value)} />
@@ -116,15 +118,15 @@ export default function AddDataForm() {
         </CardContent>
       </Card>
       <ToastContainer 
-  position="bottom-right" // Set position to bottom-right
-  autoClose={5000} // Optional: Auto close after 5 seconds
-  hideProgressBar={false} // Optional: Show progress bar
-  newestOnTop={false} // Optional: Show newest on top
-  closeOnClick // Optional: Close on click
-  pauseOnHover // Optional: Pause on hover
-  draggable // Optional: Allow dragging
-  pauseOnFocusLoss // Optional: Pause on focus loss
-/>
+        position="bottom-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        pauseOnHover
+        draggable
+        pauseOnFocusLoss
+      />
     </div>
   );
 }
