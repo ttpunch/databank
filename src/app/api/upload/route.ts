@@ -192,11 +192,19 @@ export async function POST(request: NextRequest) {
 
         } catch (error) {
           results.failed++;
-          results.errors.push({
-            row: i + rowIndex + 2,
-            error: error.message,
-            data: row
-          });
+          if (error instanceof Error) {
+            results.errors.push({
+              row: i + rowIndex + 2,
+              error: error.message,
+              data: row
+            });
+          } else {
+            results.errors.push({
+              row: i + rowIndex + 2,
+              error: 'An unknown error occurred',
+              data: row
+            });
+          }
         }
       });
 
@@ -247,18 +255,25 @@ export async function POST(request: NextRequest) {
     }, { status: results.failed > 0 ? 207 : 200 });
 
   } catch (error) {
-    progressEmitter.emit(`progress:${uploadId}`, {
-      status: 'error',
-      error: error.message,
-      currentBatch,
-      totalBatches
-    });
-
-    console.error("File upload error:", error);
-    return NextResponse.json({
-      error: "Failed to process file",
-      details: error.message
-    }, { status: 500 });
+    if (error instanceof Error) {
+      console.error("File upload error:", error);
+      return NextResponse.json({
+        error: "Failed to process file",
+        details: error.message
+      }, { status: 500 });
+    } else {
+      console.error("File upload error: An unknown error occurred");
+      return NextResponse.json({
+        error: "Failed to process file",
+        details: "An unknown error occurred"
+      }, { status: 500 });
+    }
   }
 }
-
+const handleError = (error: unknown) => {
+    if (error instanceof Error) {
+        console.error(error.message); // Now TypeScript knows 'error' is an Error
+    } else {
+        console.error('An unknown error occurred');
+    }
+};
