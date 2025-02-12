@@ -14,7 +14,8 @@ export default withAuth(
         if (
           pathname.includes("/api/auth") || // Allow NextAuth API routes
           pathname === "/login" || 
-          pathname === "/register"
+          pathname === "/register" ||
+          pathname === "/upload"
         ) {
           return true;
         }
