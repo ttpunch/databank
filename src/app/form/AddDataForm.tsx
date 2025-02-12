@@ -9,6 +9,11 @@ import { useRouter } from "next/navigation";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+interface User {
+  name: string;
+  email: string;
+}
+
 export default function AddDataForm() {
   const router = useRouter();
   const [formData, setFormData] = useState({
@@ -21,7 +26,7 @@ export default function AddDataForm() {
     installedQuantity: "",
     availableQuantity: ""
   });
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState<User | null>(null);
 
   useEffect(() => {
     async function fetchUser() {
