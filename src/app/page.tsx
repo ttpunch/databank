@@ -3,8 +3,8 @@
 import { useSession, signIn, signOut } from "next-auth/react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
-import axios from "axios";
 import ModalDrawer from "@/components/ui/modalDrawer";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
   const { data: session, status } = useSession();
@@ -12,14 +12,21 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
   const [filterType, setFilterType] = useState("machine"); // Default filter type
+  const router = useRouter(); // Initialize router for navigation
 
   useEffect(() => {
     const fetchData = async () => {
       if (session) {
         setLoading(true);
         try {
-          const res = await axios.get(`/api/dataaddition`);
-          setData(res.data);
+          const response = await fetch(`/api/dataaddition`, { cache: 'no-store' });
+        
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+        
+          const data = await response.json();
+          setData(data);
         } catch (err) {
           console.error("Error fetching data:", err);
         } finally {
@@ -40,11 +47,11 @@ export default function Home() {
 
   if (!session) {
     return (
-      <div className="text-center  flex flex-col items-center justify-center h-screen bg-gray-900">
+      <div className="text-center flex flex-col items-center justify-center h-screen bg-gray-900">
         <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-500 to-purple-600 text-transparent bg-clip-text animate-gradient">
           Welcome to Data Management Portal
         </h1>
-        <p className="mb-6 text-gray-300 text-lg">Manage  Areas, Machines, OEMs, and Parts.</p>
+        <p className="mb-6 text-gray-300 text-lg">Manage Areas, Machines, OEMs, and Parts.</p>
         <Button onClick={() => signIn()} className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-md shadow-lg transition duration-300 hover:bg-gradient-to-l">
           Sign In
         </Button>
@@ -123,6 +130,15 @@ export default function Home() {
               </tbody>
             </table>
           </div>
+        </div>
+        {/* Upload link below the table */}
+        <div className="mt-4 flex justify-start">
+          <Button 
+            onClick={() => router.push('/upload')} // Navigate to upload page
+            className="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded transition duration-200"
+          >
+             Upload File
+          </Button>
         </div>
       </div>
     </div>

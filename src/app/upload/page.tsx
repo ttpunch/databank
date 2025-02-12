@@ -1,10 +1,14 @@
-"use client"
-// src/app/upload/page.tsx
+"use client";
 import React, { useState } from 'react';
+import { useToast } from "@/hooks/use-toast"; // Import the useToast hook
+import { Button } from "@/components/ui/button"; // Adjust the import based on your button component
+import { Input } from "@/components/ui/input"; // Adjust the import based on your input component
+import { Card, CardContent } from "@/components/ui/card"; // Adjust the import based on your card component
 
 const UploadPage: React.FC = () => {
   const [file, setFile] = useState<File | null>(null);
-  const [message, setMessage] = useState<string>('');
+  const [isUploading, setIsUploading] = useState<boolean>(false); // State to manage upload status
+  const { toast } = useToast(); // Initialize the toast function
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const selectedFile = event.target.files?.[0];
@@ -16,12 +20,17 @@ const UploadPage: React.FC = () => {
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (!file) {
-      setMessage('Please select a file to upload.');
+      toast({
+        title: "Upload Error",
+        description: "Please select a file to upload.",
+      });
       return;
     }
 
     const formData = new FormData();
     formData.append('file', file);
+
+    setIsUploading(true); // Set uploading state to true
 
     try {
       const response = await fetch('/api/upload', {
@@ -34,24 +43,48 @@ const UploadPage: React.FC = () => {
       }
 
       const result = await response.json();
-      setMessage(`File uploaded successfully: ${result.message}`);
+      toast({
+        title: "Upload Successful",
+        description: `File uploaded successfully: ${result.message}`,
+      });
     } catch (error) {
       if (error instanceof Error) {
-        setMessage(`Error: ${error.message}`);
+        toast({
+          title: "Upload Failed",
+          description: `Error: ${error.message}`,
+        });
       } else {
-        setMessage('An unknown error occurred');
+        toast({
+          title: "Upload Error",
+          description: 'An unknown error occurred',
+        });
       }
+    } finally {
+      setIsUploading(false); // Reset uploading state
     }
   };
 
   return (
-    <div>
-      <h1>Upload File</h1>
-      <form onSubmit={handleSubmit}>
-        <input type="file" onChange={handleFileChange} />
-        <button type="submit">Upload</button>
-      </form>
-      {message && <p>{message}</p>}
+    <div className="flex items-center justify-center min-h-screen bg-gray-100 p-4">
+      <Card className="max-w-lg w-full p-6 shadow-lg rounded-lg bg-white">
+        <CardContent>
+          <h1 className="text-2xl font-bold mb-4 text-gray-800 text-center">Upload File</h1>
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <Input 
+              type="file" 
+              onChange={handleFileChange} 
+              className="border rounded-md p-2 w-full bg-gray-50" 
+            />
+            <Button 
+              type="submit" 
+              className={`w-full ${isUploading ? 'bg-gray-400 cursor-not-allowed' : 'bg-indigo-600 hover:bg-indigo-700'} text-white font-semibold py-2 rounded-md transition`}
+              disabled={isUploading} // Disable button while uploading
+            >
+              {isUploading ? 'Uploading...' : 'Upload'}
+            </Button>
+          </form>
+        </CardContent>
+      </Card>
     </div>
   );
 };
