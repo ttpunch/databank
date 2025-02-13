@@ -1,0 +1,2727 @@
+[
+    {
+        "_id": "67a98a7dfd8dda3700ada103",
+        "machine": {
+            "_id": "67a98a7dfd8dda3700ada0fe",
+            "name": "dsad",
+            "machineNo": "dsad",
+            "area": "67a98a7dfd8dda3700ada0fb",
+            "createdAt": "2025-02-10T05:11:25.110Z",
+            "updatedAt": "2025-02-10T05:11:25.110Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67a98a7dfd8dda3700ada101",
+            "name": "asdsas",
+            "createdAt": "2025-02-10T05:11:25.199Z",
+            "updatedAt": "2025-02-10T05:11:25.199Z",
+            "__v": 0
+        },
+        "partNo": "dasd",
+        "partDetail": "dasd",
+        "installedQuantity": 54,
+        "availableQuantity": 433,
+        "createdAt": "2025-02-10T05:11:25.245Z",
+        "updatedAt": "2025-02-10T05:11:25.245Z"
+    },
+    {
+        "_id": "67a98ad6fd8dda3700ada10f",
+        "machine": {
+            "_id": "67a98ad5fd8dda3700ada10a",
+            "name": "fds",
+            "machineNo": "fds",
+            "area": "67a98ad5fd8dda3700ada107",
+            "createdAt": "2025-02-10T05:12:53.996Z",
+            "updatedAt": "2025-02-10T05:12:53.996Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67a98ad6fd8dda3700ada10d",
+            "name": "fdsf",
+            "createdAt": "2025-02-10T05:12:54.085Z",
+            "updatedAt": "2025-02-10T05:12:54.085Z",
+            "__v": 0
+        },
+        "partNo": "sdff",
+        "partDetail": "sd",
+        "installedQuantity": 43,
+        "availableQuantity": 44,
+        "createdAt": "2025-02-10T05:12:54.132Z",
+        "updatedAt": "2025-02-10T05:12:54.132Z"
+    },
+    {
+        "_id": "67a993e3fd8dda3700ada11e",
+        "machine": {
+            "_id": "67a993e3fd8dda3700ada119",
+            "name": "dsd",
+            "machineNo": "dsd",
+            "area": "67a98a7dfd8dda3700ada0fb",
+            "createdAt": "2025-02-10T05:51:31.484Z",
+            "updatedAt": "2025-02-10T05:51:31.484Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67a993e3fd8dda3700ada11c",
+            "name": "ds",
+            "createdAt": "2025-02-10T05:51:31.598Z",
+            "updatedAt": "2025-02-10T05:51:31.598Z",
+            "__v": 0
+        },
+        "partNo": "ddad",
+        "partDetail": "dasdad",
+        "installedQuantity": 67,
+        "availableQuantity": 6767,
+        "createdAt": "2025-02-10T05:51:31.649Z",
+        "updatedAt": "2025-02-10T05:51:31.649Z"
+    },
+    {
+        "_id": "67a994e9fd8dda3700ada12c",
+        "machine": {
+            "_id": "67a994e9fd8dda3700ada127",
+            "name": "328",
+            "machineNo": "homma",
+            "area": "67a98ad5fd8dda3700ada107",
+            "createdAt": "2025-02-10T05:55:53.306Z",
+            "updatedAt": "2025-02-10T05:55:53.306Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67a994e9fd8dda3700ada12a",
+            "name": "siemens",
+            "createdAt": "2025-02-10T05:55:53.421Z",
+            "updatedAt": "2025-02-10T05:55:53.421Z",
+            "__v": 0
+        },
+        "partNo": "32323",
+        "partDetail": "card",
+        "installedQuantity": 10,
+        "availableQuantity": 1,
+        "createdAt": "2025-02-10T05:55:53.473Z",
+        "updatedAt": "2025-02-10T05:55:53.473Z"
+    },
+    {
+        "_id": "67a995fefd8dda3700ada139",
+        "machine": {
+            "_id": "67a995fefd8dda3700ada134",
+            "name": "sdsa",
+            "machineNo": "ddsad",
+            "area": "67a98a7dfd8dda3700ada0fb",
+            "createdAt": "2025-02-10T06:00:30.279Z",
+            "updatedAt": "2025-02-10T06:00:30.279Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67a995fefd8dda3700ada137",
+            "name": "dasd",
+            "createdAt": "2025-02-10T06:00:30.392Z",
+            "updatedAt": "2025-02-10T06:00:30.392Z",
+            "__v": 0
+        },
+        "partNo": "234",
+        "partDetail": "43443",
+        "installedQuantity": 434,
+        "availableQuantity": 4324,
+        "createdAt": "2025-02-10T06:00:30.445Z",
+        "updatedAt": "2025-02-10T06:00:30.445Z"
+    },
+    {
+        "_id": "67a997a2fd8dda3700ada145",
+        "machine": {
+            "_id": "67a997a2fd8dda3700ada140",
+            "name": "cxc",
+            "machineNo": "xcxc",
+            "area": "67a98ad5fd8dda3700ada107",
+            "createdAt": "2025-02-10T06:07:30.018Z",
+            "updatedAt": "2025-02-10T06:07:30.018Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67a997a2fd8dda3700ada143",
+            "name": "xcxc",
+            "createdAt": "2025-02-10T06:07:30.131Z",
+            "updatedAt": "2025-02-10T06:07:30.131Z",
+            "__v": 0
+        },
+        "partNo": "xcx",
+        "partDetail": "cxcx",
+        "installedQuantity": 434,
+        "availableQuantity": 34,
+        "createdAt": "2025-02-10T06:07:30.185Z",
+        "updatedAt": "2025-02-10T06:07:30.185Z"
+    },
+    {
+        "_id": "67a99872fd8dda3700ada299",
+        "machine": {
+            "_id": "67a99872fd8dda3700ada294",
+            "name": "fdsf",
+            "machineNo": "sdfsdf",
+            "area": "67a99872fd8dda3700ada291",
+            "createdAt": "2025-02-10T06:10:58.233Z",
+            "updatedAt": "2025-02-10T06:10:58.233Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67a99872fd8dda3700ada297",
+            "name": "dsfsdf",
+            "createdAt": "2025-02-10T06:10:58.350Z",
+            "updatedAt": "2025-02-10T06:10:58.350Z",
+            "__v": 0
+        },
+        "partNo": "fsdf",
+        "partDetail": "dsfsd",
+        "installedQuantity": 54,
+        "availableQuantity": 545,
+        "createdAt": "2025-02-10T06:10:58.401Z",
+        "updatedAt": "2025-02-10T06:10:58.401Z"
+    },
+    {
+        "_id": "67a998c2fd8dda3700ada6b8",
+        "machine": {
+            "_id": "67a998c2fd8dda3700ada6b2",
+            "name": "yt",
+            "machineNo": "tyt",
+            "area": "67a99872fd8dda3700ada291",
+            "createdAt": "2025-02-10T06:12:18.638Z",
+            "updatedAt": "2025-02-10T06:12:18.638Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67a998c2fd8dda3700ada6b6",
+            "name": "yty",
+            "createdAt": "2025-02-10T06:12:18.732Z",
+            "updatedAt": "2025-02-10T06:12:18.732Z",
+            "__v": 0
+        },
+        "partNo": "tyty",
+        "partDetail": "tyt",
+        "installedQuantity": 6776767,
+        "availableQuantity": 6767676,
+        "createdAt": "2025-02-10T06:12:18.781Z",
+        "updatedAt": "2025-02-10T06:12:18.781Z"
+    },
+    {
+        "_id": "67a9aa58e0d8f24b0c9884ed",
+        "machine": {
+            "_id": "67a9aa58e0d8f24b0c9884e8",
+            "name": "dsad",
+            "machineNo": "dsa",
+            "area": "67a98a7dfd8dda3700ada0fb",
+            "createdAt": "2025-02-10T07:27:20.814Z",
+            "updatedAt": "2025-02-10T07:27:20.814Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67a9aa58e0d8f24b0c9884eb",
+            "name": "sd",
+            "createdAt": "2025-02-10T07:27:20.905Z",
+            "updatedAt": "2025-02-10T07:27:20.905Z",
+            "__v": 0
+        },
+        "partNo": "fd",
+        "partDetail": "dad",
+        "installedQuantity": 32,
+        "availableQuantity": 32,
+        "createdAt": "2025-02-10T07:27:20.955Z",
+        "updatedAt": "2025-02-10T07:27:20.955Z"
+    },
+    {
+        "_id": "67a9aad3e0d8f24b0c988502",
+        "machine": {
+            "_id": "67a9aabfe0d8f24b0c9884f8",
+            "name": "dsdasd",
+            "machineNo": "dsddsad",
+            "area": "67a98a7dfd8dda3700ada0fb",
+            "createdAt": "2025-02-10T07:29:03.524Z",
+            "updatedAt": "2025-02-10T07:29:03.524Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67a9aabfe0d8f24b0c9884fb",
+            "name": "adadsd",
+            "createdAt": "2025-02-10T07:29:03.659Z",
+            "updatedAt": "2025-02-10T07:29:03.659Z",
+            "__v": 0
+        },
+        "partNo": "sdsadad",
+        "partDetail": "adsdsdsad",
+        "installedQuantity": 5454,
+        "availableQuantity": 54545,
+        "createdAt": "2025-02-10T07:29:23.551Z",
+        "updatedAt": "2025-02-10T07:29:23.551Z"
+    },
+    {
+        "_id": "67a9ab31e0d8f24b0c98850d",
+        "machine": {
+            "_id": "67a9ab31e0d8f24b0c988508",
+            "name": "fdsf",
+            "machineNo": "fdsf",
+            "area": "67a98a7dfd8dda3700ada0fb",
+            "createdAt": "2025-02-10T07:30:57.246Z",
+            "updatedAt": "2025-02-10T07:30:57.246Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67a9ab31e0d8f24b0c98850b",
+            "name": "sdfsdf",
+            "createdAt": "2025-02-10T07:30:57.351Z",
+            "updatedAt": "2025-02-10T07:30:57.351Z",
+            "__v": 0
+        },
+        "partNo": "fsdfsdf",
+        "partDetail": "fsdfsdf",
+        "installedQuantity": 5656,
+        "availableQuantity": 343,
+        "createdAt": "2025-02-10T07:30:57.400Z",
+        "updatedAt": "2025-02-10T07:30:57.400Z"
+    },
+    {
+        "_id": "67ac508495ea0070635f9395",
+        "machine": {
+            "_id": "67ac508495ea0070635f9390",
+            "name": "sds",
+            "machineNo": "sds",
+            "area": "67a98ad5fd8dda3700ada107",
+            "createdAt": "2025-02-12T07:40:52.742Z",
+            "updatedAt": "2025-02-12T07:40:52.742Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac508495ea0070635f9393",
+            "name": "sds",
+            "createdAt": "2025-02-12T07:40:52.859Z",
+            "updatedAt": "2025-02-12T07:40:52.859Z",
+            "__v": 0
+        },
+        "partNo": "dsd",
+        "partDetail": "dsds",
+        "installedQuantity": 2323,
+        "availableQuantity": 232,
+        "createdAt": "2025-02-12T07:40:52.912Z",
+        "updatedAt": "2025-02-12T07:40:52.912Z"
+    },
+    {
+        "_id": "67ac50a295ea0070635f93a7",
+        "machine": {
+            "_id": "67ac50a295ea0070635f93a2",
+            "name": "2343",
+            "machineNo": "343",
+            "area": "67ac509495ea0070635f939a",
+            "createdAt": "2025-02-12T07:41:22.760Z",
+            "updatedAt": "2025-02-12T07:41:22.760Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac50a295ea0070635f93a5",
+            "name": "sdd",
+            "createdAt": "2025-02-12T07:41:22.857Z",
+            "updatedAt": "2025-02-12T07:41:22.857Z",
+            "__v": 0
+        },
+        "partNo": "ssds",
+        "partDetail": "dsds",
+        "installedQuantity": 565,
+        "availableQuantity": 787,
+        "createdAt": "2025-02-12T07:41:22.908Z",
+        "updatedAt": "2025-02-12T07:41:22.908Z"
+    },
+    {
+        "_id": "67ac50b895ea0070635f93b2",
+        "machine": {
+            "_id": "67ac50b895ea0070635f93ad",
+            "name": "gdfgf",
+            "machineNo": "fd",
+            "area": "67a98ad5fd8dda3700ada107",
+            "createdAt": "2025-02-12T07:41:44.513Z",
+            "updatedAt": "2025-02-12T07:41:44.513Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac50b895ea0070635f93b0",
+            "name": "gfd",
+            "createdAt": "2025-02-12T07:41:44.622Z",
+            "updatedAt": "2025-02-12T07:41:44.622Z",
+            "__v": 0
+        },
+        "partNo": "gfg",
+        "partDetail": "dfgdg",
+        "installedQuantity": 54,
+        "availableQuantity": 543,
+        "createdAt": "2025-02-12T07:41:44.676Z",
+        "updatedAt": "2025-02-12T07:41:44.676Z"
+    },
+    {
+        "_id": "67ac50cb95ea0070635f93bd",
+        "machine": {
+            "_id": "67ac50cb95ea0070635f93b8",
+            "name": "434",
+            "machineNo": "43",
+            "area": "67a98a7dfd8dda3700ada0fb",
+            "createdAt": "2025-02-12T07:42:03.756Z",
+            "updatedAt": "2025-02-12T07:42:03.756Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac50cb95ea0070635f93bb",
+            "name": "454",
+            "createdAt": "2025-02-12T07:42:03.854Z",
+            "updatedAt": "2025-02-12T07:42:03.854Z",
+            "__v": 0
+        },
+        "partNo": "trtre",
+        "partDetail": "trte",
+        "installedQuantity": 767,
+        "availableQuantity": 676,
+        "createdAt": "2025-02-12T07:42:03.903Z",
+        "updatedAt": "2025-02-12T07:42:03.903Z"
+    },
+    {
+        "_id": "67ac520095ea0070635f93f3",
+        "machine": {
+            "_id": "67ac520095ea0070635f93ee",
+            "name": "ghgfh",
+            "machineNo": "ghgfhd",
+            "area": "67a98a7dfd8dda3700ada0fb",
+            "createdAt": "2025-02-12T07:47:12.108Z",
+            "updatedAt": "2025-02-12T07:47:12.108Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac520095ea0070635f93f1",
+            "name": "hgfhf",
+            "createdAt": "2025-02-12T07:47:12.224Z",
+            "updatedAt": "2025-02-12T07:47:12.224Z",
+            "__v": 0
+        },
+        "partNo": "hfghfgh",
+        "partDetail": "fghf",
+        "installedQuantity": 7687,
+        "availableQuantity": 87,
+        "createdAt": "2025-02-12T07:47:12.274Z",
+        "updatedAt": "2025-02-12T07:47:12.274Z"
+    },
+    {
+        "_id": "67ac862a95ea0070635f94e6",
+        "machine": {
+            "_id": "67ac862a95ea0070635f94ce",
+            "name": "CNC Router",
+            "machineNo": "M-498",
+            "area": "67ac862995ea0070635f9471",
+            "createdAt": "2025-02-12T11:29:46.129Z",
+            "updatedAt": "2025-02-12T11:29:46.129Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94da",
+            "name": "ABB",
+            "createdAt": "2025-02-12T11:29:46.222Z",
+            "updatedAt": "2025-02-12T11:29:46.222Z",
+            "__v": 0
+        },
+        "partNo": "P-4315",
+        "partDetail": "High precision",
+        "installedQuantity": 50,
+        "availableQuantity": 1,
+        "createdAt": "2025-02-12T11:29:46.269Z",
+        "updatedAt": "2025-02-12T11:29:46.269Z"
+    },
+    {
+        "_id": "67ac862a95ea0070635f94e8",
+        "machine": {
+            "_id": "67ac862a95ea0070635f94ca",
+            "name": "Grinding",
+            "machineNo": "M-507",
+            "area": "67ac862895ea0070635f9461",
+            "createdAt": "2025-02-12T11:29:46.115Z",
+            "updatedAt": "2025-02-12T11:29:46.115Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94dc",
+            "name": "Siemens",
+            "createdAt": "2025-02-12T11:29:46.228Z",
+            "updatedAt": "2025-02-12T11:29:46.228Z",
+            "__v": 0
+        },
+        "partNo": "P-7202",
+        "partDetail": "High precision",
+        "installedQuantity": 41,
+        "availableQuantity": 20,
+        "createdAt": "2025-02-12T11:29:46.278Z",
+        "updatedAt": "2025-02-12T11:29:46.278Z"
+    },
+    {
+        "_id": "67ac862a95ea0070635f94ea",
+        "machine": {
+            "_id": "67ac862a95ea0070635f94d0",
+            "name": "Drilling",
+            "machineNo": "M-358",
+            "area": "67ac862895ea0070635f9461",
+            "createdAt": "2025-02-12T11:29:46.135Z",
+            "updatedAt": "2025-02-12T11:29:46.135Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94e2",
+            "name": "Fanuc",
+            "createdAt": "2025-02-12T11:29:46.236Z",
+            "updatedAt": "2025-02-12T11:29:46.236Z",
+            "__v": 0
+        },
+        "partNo": "P-3742",
+        "partDetail": "Lightweight",
+        "installedQuantity": 46,
+        "availableQuantity": 17,
+        "createdAt": "2025-02-12T11:29:46.291Z",
+        "updatedAt": "2025-02-12T11:29:46.291Z"
+    },
+    {
+        "_id": "67ac862a95ea0070635f94ec",
+        "machine": {
+            "_id": "67ac862a95ea0070635f94c8",
+            "name": "Lathe",
+            "machineNo": "M-484",
+            "area": "67ac862895ea0070635f9465",
+            "createdAt": "2025-02-12T11:29:46.111Z",
+            "updatedAt": "2025-02-12T11:29:46.111Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94e0",
+            "name": "Bosch",
+            "createdAt": "2025-02-12T11:29:46.234Z",
+            "updatedAt": "2025-02-12T11:29:46.234Z",
+            "__v": 0
+        },
+        "partNo": "P-8046",
+        "partDetail": "Heavy-duty",
+        "installedQuantity": 36,
+        "availableQuantity": 6,
+        "createdAt": "2025-02-12T11:29:46.293Z",
+        "updatedAt": "2025-02-12T11:29:46.293Z"
+    },
+    {
+        "_id": "67ac862a95ea0070635f94f1",
+        "machine": {
+            "_id": "67ac862a95ea0070635f94ee",
+            "name": "Milling",
+            "machineNo": "M-941",
+            "area": "67ac862995ea0070635f9467",
+            "createdAt": "2025-02-12T11:29:46.374Z",
+            "updatedAt": "2025-02-12T11:29:46.374Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94e0",
+            "name": "Bosch",
+            "createdAt": "2025-02-12T11:29:46.234Z",
+            "updatedAt": "2025-02-12T11:29:46.234Z",
+            "__v": 0
+        },
+        "partNo": "P-2826",
+        "partDetail": "Lightweight",
+        "installedQuantity": 30,
+        "availableQuantity": 25,
+        "createdAt": "2025-02-12T11:29:46.468Z",
+        "updatedAt": "2025-02-12T11:29:46.468Z"
+    },
+    {
+        "_id": "67ac862b95ea0070635f95ea",
+        "machine": {
+            "_id": "67ac862a95ea0070635f9559",
+            "name": "Milling",
+            "machineNo": "M-269",
+            "area": "67ac862995ea0070635f9467",
+            "createdAt": "2025-02-12T11:29:46.950Z",
+            "updatedAt": "2025-02-12T11:29:46.950Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94dc",
+            "name": "Siemens",
+            "createdAt": "2025-02-12T11:29:46.228Z",
+            "updatedAt": "2025-02-12T11:29:46.228Z",
+            "__v": 0
+        },
+        "partNo": "P-8160",
+        "partDetail": "High precision",
+        "installedQuantity": 26,
+        "availableQuantity": 3,
+        "createdAt": "2025-02-12T11:29:47.948Z",
+        "updatedAt": "2025-02-12T11:29:47.948Z"
+    },
+    {
+        "_id": "67ac862b95ea0070635f95ec",
+        "machine": {
+            "_id": "67ac862a95ea0070635f9556",
+            "name": "Drilling",
+            "machineNo": "M-404",
+            "area": "67ac862895ea0070635f9461",
+            "createdAt": "2025-02-12T11:29:46.946Z",
+            "updatedAt": "2025-02-12T11:29:46.946Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94e0",
+            "name": "Bosch",
+            "createdAt": "2025-02-12T11:29:46.234Z",
+            "updatedAt": "2025-02-12T11:29:46.234Z",
+            "__v": 0
+        },
+        "partNo": "P-5964",
+        "partDetail": "Standard",
+        "installedQuantity": 17,
+        "availableQuantity": 7,
+        "createdAt": "2025-02-12T11:29:47.950Z",
+        "updatedAt": "2025-02-12T11:29:47.950Z"
+    },
+    {
+        "_id": "67ac862b95ea0070635f95f0",
+        "machine": {
+            "_id": "67ac862a95ea0070635f955b",
+            "name": "Milling",
+            "machineNo": "M-506",
+            "area": "67ac862895ea0070635f9461",
+            "createdAt": "2025-02-12T11:29:46.985Z",
+            "updatedAt": "2025-02-12T11:29:46.985Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94e2",
+            "name": "Fanuc",
+            "createdAt": "2025-02-12T11:29:46.236Z",
+            "updatedAt": "2025-02-12T11:29:46.236Z",
+            "__v": 0
+        },
+        "partNo": "P-5582",
+        "partDetail": "Lightweight",
+        "installedQuantity": 0,
+        "availableQuantity": 0,
+        "createdAt": "2025-02-12T11:29:47.954Z",
+        "updatedAt": "2025-02-12T11:29:47.954Z"
+    },
+    {
+        "_id": "67ac862b95ea0070635f95f2",
+        "machine": {
+            "_id": "67ac862a95ea0070635f955d",
+            "name": "Drilling",
+            "machineNo": "M-286",
+            "area": "67ac862995ea0070635f946d",
+            "createdAt": "2025-02-12T11:29:46.986Z",
+            "updatedAt": "2025-02-12T11:29:46.986Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94da",
+            "name": "ABB",
+            "createdAt": "2025-02-12T11:29:46.222Z",
+            "updatedAt": "2025-02-12T11:29:46.222Z",
+            "__v": 0
+        },
+        "partNo": "P-7880",
+        "partDetail": "High precision",
+        "installedQuantity": 24,
+        "availableQuantity": 15,
+        "createdAt": "2025-02-12T11:29:47.960Z",
+        "updatedAt": "2025-02-12T11:29:47.960Z"
+    },
+    {
+        "_id": "67ac862b95ea0070635f95f4",
+        "machine": {
+            "_id": "67ac862a95ea0070635f9561",
+            "name": "Grinding",
+            "machineNo": "M-492",
+            "area": "67ac862995ea0070635f9471",
+            "createdAt": "2025-02-12T11:29:46.989Z",
+            "updatedAt": "2025-02-12T11:29:46.989Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94e0",
+            "name": "Bosch",
+            "createdAt": "2025-02-12T11:29:46.234Z",
+            "updatedAt": "2025-02-12T11:29:46.234Z",
+            "__v": 0
+        },
+        "partNo": "P-5939",
+        "partDetail": "Lightweight",
+        "installedQuantity": 24,
+        "availableQuantity": 19,
+        "createdAt": "2025-02-12T11:29:47.961Z",
+        "updatedAt": "2025-02-12T11:29:47.961Z"
+    },
+    {
+        "_id": "67ac862b95ea0070635f95f8",
+        "machine": {
+            "_id": "67ac862a95ea0070635f955f",
+            "name": "Drilling",
+            "machineNo": "M-102",
+            "area": "67ac862995ea0070635f9471",
+            "createdAt": "2025-02-12T11:29:46.988Z",
+            "updatedAt": "2025-02-12T11:29:46.988Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94dc",
+            "name": "Siemens",
+            "createdAt": "2025-02-12T11:29:46.228Z",
+            "updatedAt": "2025-02-12T11:29:46.228Z",
+            "__v": 0
+        },
+        "partNo": "P-9885",
+        "partDetail": "High precision",
+        "installedQuantity": 5,
+        "availableQuantity": 1,
+        "createdAt": "2025-02-12T11:29:47.976Z",
+        "updatedAt": "2025-02-12T11:29:47.976Z"
+    },
+    {
+        "_id": "67ac862b95ea0070635f95fa",
+        "machine": {
+            "_id": "67ac862a95ea0070635f9565",
+            "name": "Drilling",
+            "machineNo": "M-567",
+            "area": "67ac862895ea0070635f9465",
+            "createdAt": "2025-02-12T11:29:46.996Z",
+            "updatedAt": "2025-02-12T11:29:46.996Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94da",
+            "name": "ABB",
+            "createdAt": "2025-02-12T11:29:46.222Z",
+            "updatedAt": "2025-02-12T11:29:46.222Z",
+            "__v": 0
+        },
+        "partNo": "P-1043",
+        "partDetail": "Standard",
+        "installedQuantity": 45,
+        "availableQuantity": 21,
+        "createdAt": "2025-02-12T11:29:47.984Z",
+        "updatedAt": "2025-02-12T11:29:47.984Z"
+    },
+    {
+        "_id": "67ac862b95ea0070635f95fe",
+        "machine": {
+            "_id": "67ac862b95ea0070635f956d",
+            "name": "Milling",
+            "machineNo": "M-787",
+            "area": "67ac862995ea0070635f9471",
+            "createdAt": "2025-02-12T11:29:47.001Z",
+            "updatedAt": "2025-02-12T11:29:47.001Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94e2",
+            "name": "Fanuc",
+            "createdAt": "2025-02-12T11:29:46.236Z",
+            "updatedAt": "2025-02-12T11:29:46.236Z",
+            "__v": 0
+        },
+        "partNo": "P-6336",
+        "partDetail": "Industrial grade",
+        "installedQuantity": 14,
+        "availableQuantity": 3,
+        "createdAt": "2025-02-12T11:29:47.999Z",
+        "updatedAt": "2025-02-12T11:29:47.999Z"
+    },
+    {
+        "_id": "67ac862b95ea0070635f95fc",
+        "machine": {
+            "_id": "67ac862a95ea0070635f9567",
+            "name": "Lathe",
+            "machineNo": "M-943",
+            "area": "67ac862995ea0070635f9467",
+            "createdAt": "2025-02-12T11:29:46.997Z",
+            "updatedAt": "2025-02-12T11:29:46.997Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94e0",
+            "name": "Bosch",
+            "createdAt": "2025-02-12T11:29:46.234Z",
+            "updatedAt": "2025-02-12T11:29:46.234Z",
+            "__v": 0
+        },
+        "partNo": "P-6360",
+        "partDetail": "High precision",
+        "installedQuantity": 16,
+        "availableQuantity": 2,
+        "createdAt": "2025-02-12T11:29:47.997Z",
+        "updatedAt": "2025-02-12T11:29:47.997Z"
+    },
+    {
+        "_id": "67ac862c95ea0070635f9602",
+        "machine": {
+            "_id": "67ac862b95ea0070635f9571",
+            "name": "CNC Router",
+            "machineNo": "M-476",
+            "area": "67ac862995ea0070635f9471",
+            "createdAt": "2025-02-12T11:29:47.030Z",
+            "updatedAt": "2025-02-12T11:29:47.030Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94e0",
+            "name": "Bosch",
+            "createdAt": "2025-02-12T11:29:46.234Z",
+            "updatedAt": "2025-02-12T11:29:46.234Z",
+            "__v": 0
+        },
+        "partNo": "P-7686",
+        "partDetail": "Lightweight",
+        "installedQuantity": 34,
+        "availableQuantity": 13,
+        "createdAt": "2025-02-12T11:29:48.002Z",
+        "updatedAt": "2025-02-12T11:29:48.002Z"
+    },
+    {
+        "_id": "67ac862c95ea0070635f9600",
+        "machine": {
+            "_id": "67ac862b95ea0070635f956f",
+            "name": "CNC Router",
+            "machineNo": "M-827",
+            "area": "67ac862995ea0070635f9467",
+            "createdAt": "2025-02-12T11:29:47.027Z",
+            "updatedAt": "2025-02-12T11:29:47.027Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94e2",
+            "name": "Fanuc",
+            "createdAt": "2025-02-12T11:29:46.236Z",
+            "updatedAt": "2025-02-12T11:29:46.236Z",
+            "__v": 0
+        },
+        "partNo": "P-4709",
+        "partDetail": "High precision",
+        "installedQuantity": 9,
+        "availableQuantity": 0,
+        "createdAt": "2025-02-12T11:29:48.000Z",
+        "updatedAt": "2025-02-12T11:29:48.000Z"
+    },
+    {
+        "_id": "67ac862c95ea0070635f9604",
+        "machine": {
+            "_id": "67ac862a95ea0070635f956b",
+            "name": "CNC Router",
+            "machineNo": "M-775",
+            "area": "67ac862895ea0070635f9465",
+            "createdAt": "2025-02-12T11:29:47.000Z",
+            "updatedAt": "2025-02-12T11:29:47.000Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94e2",
+            "name": "Fanuc",
+            "createdAt": "2025-02-12T11:29:46.236Z",
+            "updatedAt": "2025-02-12T11:29:46.236Z",
+            "__v": 0
+        },
+        "partNo": "P-6263",
+        "partDetail": "High precision",
+        "installedQuantity": 6,
+        "availableQuantity": 6,
+        "createdAt": "2025-02-12T11:29:48.005Z",
+        "updatedAt": "2025-02-12T11:29:48.005Z"
+    },
+    {
+        "_id": "67ac862c95ea0070635f9606",
+        "machine": {
+            "_id": "67ac862a95ea0070635f9569",
+            "name": "CNC Router",
+            "machineNo": "M-784",
+            "area": "67ac862895ea0070635f9461",
+            "createdAt": "2025-02-12T11:29:46.999Z",
+            "updatedAt": "2025-02-12T11:29:46.999Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94da",
+            "name": "ABB",
+            "createdAt": "2025-02-12T11:29:46.222Z",
+            "updatedAt": "2025-02-12T11:29:46.222Z",
+            "__v": 0
+        },
+        "partNo": "P-7183",
+        "partDetail": "Industrial grade",
+        "installedQuantity": 1,
+        "availableQuantity": 1,
+        "createdAt": "2025-02-12T11:29:48.007Z",
+        "updatedAt": "2025-02-12T11:29:48.007Z"
+    },
+    {
+        "_id": "67ac862c95ea0070635f960a",
+        "machine": {
+            "_id": "67ac862b95ea0070635f9575",
+            "name": "Milling",
+            "machineNo": "M-544",
+            "area": "67ac862995ea0070635f9471",
+            "createdAt": "2025-02-12T11:29:47.037Z",
+            "updatedAt": "2025-02-12T11:29:47.037Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94da",
+            "name": "ABB",
+            "createdAt": "2025-02-12T11:29:46.222Z",
+            "updatedAt": "2025-02-12T11:29:46.222Z",
+            "__v": 0
+        },
+        "partNo": "P-6078",
+        "partDetail": "High precision",
+        "installedQuantity": 15,
+        "availableQuantity": 0,
+        "createdAt": "2025-02-12T11:29:48.015Z",
+        "updatedAt": "2025-02-12T11:29:48.015Z"
+    },
+    {
+        "_id": "67ac862c95ea0070635f9608",
+        "machine": {
+            "_id": "67ac862b95ea0070635f9573",
+            "name": "Lathe",
+            "machineNo": "M-200",
+            "area": "67ac862895ea0070635f9465",
+            "createdAt": "2025-02-12T11:29:47.036Z",
+            "updatedAt": "2025-02-12T11:29:47.036Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94e2",
+            "name": "Fanuc",
+            "createdAt": "2025-02-12T11:29:46.236Z",
+            "updatedAt": "2025-02-12T11:29:46.236Z",
+            "__v": 0
+        },
+        "partNo": "P-2002",
+        "partDetail": "Standard",
+        "installedQuantity": 33,
+        "availableQuantity": 25,
+        "createdAt": "2025-02-12T11:29:48.010Z",
+        "updatedAt": "2025-02-12T11:29:48.010Z"
+    },
+    {
+        "_id": "67ac862c95ea0070635f9610",
+        "machine": {
+            "_id": "67ac862b95ea0070635f9581",
+            "name": "Grinding",
+            "machineNo": "M-917",
+            "area": "67ac862995ea0070635f946d",
+            "createdAt": "2025-02-12T11:29:47.052Z",
+            "updatedAt": "2025-02-12T11:29:47.052Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94e0",
+            "name": "Bosch",
+            "createdAt": "2025-02-12T11:29:46.234Z",
+            "updatedAt": "2025-02-12T11:29:46.234Z",
+            "__v": 0
+        },
+        "partNo": "P-5007",
+        "partDetail": "Heavy-duty",
+        "installedQuantity": 2,
+        "availableQuantity": 1,
+        "createdAt": "2025-02-12T11:29:48.040Z",
+        "updatedAt": "2025-02-12T11:29:48.040Z"
+    },
+    {
+        "_id": "67ac862c95ea0070635f9612",
+        "machine": {
+            "_id": "67ac862b95ea0070635f957d",
+            "name": "CNC Router",
+            "machineNo": "M-946",
+            "area": "67ac862995ea0070635f9467",
+            "createdAt": "2025-02-12T11:29:47.048Z",
+            "updatedAt": "2025-02-12T11:29:47.048Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94e0",
+            "name": "Bosch",
+            "createdAt": "2025-02-12T11:29:46.234Z",
+            "updatedAt": "2025-02-12T11:29:46.234Z",
+            "__v": 0
+        },
+        "partNo": "P-5373",
+        "partDetail": "Heavy-duty",
+        "installedQuantity": 31,
+        "availableQuantity": 25,
+        "createdAt": "2025-02-12T11:29:48.044Z",
+        "updatedAt": "2025-02-12T11:29:48.044Z"
+    },
+    {
+        "_id": "67ac862c95ea0070635f9614",
+        "machine": {
+            "_id": "67ac862b95ea0070635f9579",
+            "name": "Drilling",
+            "machineNo": "M-405",
+            "area": "67ac862995ea0070635f9467",
+            "createdAt": "2025-02-12T11:29:47.041Z",
+            "updatedAt": "2025-02-12T11:29:47.041Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94da",
+            "name": "ABB",
+            "createdAt": "2025-02-12T11:29:46.222Z",
+            "updatedAt": "2025-02-12T11:29:46.222Z",
+            "__v": 0
+        },
+        "partNo": "P-7989",
+        "partDetail": "Heavy-duty",
+        "installedQuantity": 36,
+        "availableQuantity": 5,
+        "createdAt": "2025-02-12T11:29:48.048Z",
+        "updatedAt": "2025-02-12T11:29:48.048Z"
+    },
+    {
+        "_id": "67ac862c95ea0070635f9618",
+        "machine": {
+            "_id": "67ac862b95ea0070635f9583",
+            "name": "Drilling",
+            "machineNo": "M-168",
+            "area": "67ac862995ea0070635f946d",
+            "createdAt": "2025-02-12T11:29:47.076Z",
+            "updatedAt": "2025-02-12T11:29:47.076Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94dc",
+            "name": "Siemens",
+            "createdAt": "2025-02-12T11:29:46.228Z",
+            "updatedAt": "2025-02-12T11:29:46.228Z",
+            "__v": 0
+        },
+        "partNo": "P-6112",
+        "partDetail": "Heavy-duty",
+        "installedQuantity": 19,
+        "availableQuantity": 12,
+        "createdAt": "2025-02-12T11:29:48.054Z",
+        "updatedAt": "2025-02-12T11:29:48.054Z"
+    },
+    {
+        "_id": "67ac862c95ea0070635f961a",
+        "machine": {
+            "_id": "67ac862b95ea0070635f958f",
+            "name": "Lathe",
+            "machineNo": "M-495",
+            "area": "67ac862995ea0070635f9471",
+            "createdAt": "2025-02-12T11:29:47.100Z",
+            "updatedAt": "2025-02-12T11:29:47.100Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94e2",
+            "name": "Fanuc",
+            "createdAt": "2025-02-12T11:29:46.236Z",
+            "updatedAt": "2025-02-12T11:29:46.236Z",
+            "__v": 0
+        },
+        "partNo": "P-9135",
+        "partDetail": "High precision",
+        "installedQuantity": 48,
+        "availableQuantity": 39,
+        "createdAt": "2025-02-12T11:29:48.055Z",
+        "updatedAt": "2025-02-12T11:29:48.055Z"
+    },
+    {
+        "_id": "67ac862c95ea0070635f961c",
+        "machine": {
+            "_id": "67ac862b95ea0070635f9585",
+            "name": "Grinding",
+            "machineNo": "M-295",
+            "area": "67ac862995ea0070635f9471",
+            "createdAt": "2025-02-12T11:29:47.077Z",
+            "updatedAt": "2025-02-12T11:29:47.077Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94e0",
+            "name": "Bosch",
+            "createdAt": "2025-02-12T11:29:46.234Z",
+            "updatedAt": "2025-02-12T11:29:46.234Z",
+            "__v": 0
+        },
+        "partNo": "P-1771",
+        "partDetail": "Heavy-duty",
+        "installedQuantity": 4,
+        "availableQuantity": 0,
+        "createdAt": "2025-02-12T11:29:48.056Z",
+        "updatedAt": "2025-02-12T11:29:48.056Z"
+    },
+    {
+        "_id": "67ac862c95ea0070635f9620",
+        "machine": {
+            "_id": "67ac862b95ea0070635f9591",
+            "name": "CNC Router",
+            "machineNo": "M-457",
+            "area": "67ac862995ea0070635f9471",
+            "createdAt": "2025-02-12T11:29:47.101Z",
+            "updatedAt": "2025-02-12T11:29:47.101Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94e2",
+            "name": "Fanuc",
+            "createdAt": "2025-02-12T11:29:46.236Z",
+            "updatedAt": "2025-02-12T11:29:46.236Z",
+            "__v": 0
+        },
+        "partNo": "P-6508",
+        "partDetail": "High precision",
+        "installedQuantity": 23,
+        "availableQuantity": 21,
+        "createdAt": "2025-02-12T11:29:48.078Z",
+        "updatedAt": "2025-02-12T11:29:48.078Z"
+    },
+    {
+        "_id": "67ac862c95ea0070635f9624",
+        "machine": {
+            "_id": "67ac862b95ea0070635f9595",
+            "name": "Grinding",
+            "machineNo": "M-690",
+            "area": "67ac862995ea0070635f9467",
+            "createdAt": "2025-02-12T11:29:47.115Z",
+            "updatedAt": "2025-02-12T11:29:47.115Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94e2",
+            "name": "Fanuc",
+            "createdAt": "2025-02-12T11:29:46.236Z",
+            "updatedAt": "2025-02-12T11:29:46.236Z",
+            "__v": 0
+        },
+        "partNo": "P-2230",
+        "partDetail": "Industrial grade",
+        "installedQuantity": 47,
+        "availableQuantity": 44,
+        "createdAt": "2025-02-12T11:29:48.083Z",
+        "updatedAt": "2025-02-12T11:29:48.083Z"
+    },
+    {
+        "_id": "67ac862c95ea0070635f9626",
+        "machine": {
+            "_id": "67ac862b95ea0070635f9599",
+            "name": "Grinding",
+            "machineNo": "M-307",
+            "area": "67ac862995ea0070635f9471",
+            "createdAt": "2025-02-12T11:29:47.122Z",
+            "updatedAt": "2025-02-12T11:29:47.122Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94e0",
+            "name": "Bosch",
+            "createdAt": "2025-02-12T11:29:46.234Z",
+            "updatedAt": "2025-02-12T11:29:46.234Z",
+            "__v": 0
+        },
+        "partNo": "P-3867",
+        "partDetail": "Industrial grade",
+        "installedQuantity": 15,
+        "availableQuantity": 4,
+        "createdAt": "2025-02-12T11:29:48.093Z",
+        "updatedAt": "2025-02-12T11:29:48.093Z"
+    },
+    {
+        "_id": "67ac862c95ea0070635f9636",
+        "machine": {
+            "_id": "67ac862b95ea0070635f95a7",
+            "name": "CNC Router",
+            "machineNo": "M-374",
+            "area": "67ac862995ea0070635f9467",
+            "createdAt": "2025-02-12T11:29:47.156Z",
+            "updatedAt": "2025-02-12T11:29:47.156Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94e0",
+            "name": "Bosch",
+            "createdAt": "2025-02-12T11:29:46.234Z",
+            "updatedAt": "2025-02-12T11:29:46.234Z",
+            "__v": 0
+        },
+        "partNo": "P-8677",
+        "partDetail": "Industrial grade",
+        "installedQuantity": 8,
+        "availableQuantity": 7,
+        "createdAt": "2025-02-12T11:29:48.124Z",
+        "updatedAt": "2025-02-12T11:29:48.124Z"
+    },
+    {
+        "_id": "67ac862c95ea0070635f963c",
+        "machine": {
+            "_id": "67ac862b95ea0070635f95a5",
+            "name": "Grinding",
+            "machineNo": "M-199",
+            "area": "67ac862995ea0070635f946d",
+            "createdAt": "2025-02-12T11:29:47.151Z",
+            "updatedAt": "2025-02-12T11:29:47.151Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94da",
+            "name": "ABB",
+            "createdAt": "2025-02-12T11:29:46.222Z",
+            "updatedAt": "2025-02-12T11:29:46.222Z",
+            "__v": 0
+        },
+        "partNo": "P-4587",
+        "partDetail": "Standard",
+        "installedQuantity": 10,
+        "availableQuantity": 3,
+        "createdAt": "2025-02-12T11:29:48.142Z",
+        "updatedAt": "2025-02-12T11:29:48.142Z"
+    },
+    {
+        "_id": "67ac862c95ea0070635f9634",
+        "machine": {
+            "_id": "67ac862b95ea0070635f95a9",
+            "name": "Drilling",
+            "machineNo": "M-326",
+            "area": "67ac862895ea0070635f9461",
+            "createdAt": "2025-02-12T11:29:47.171Z",
+            "updatedAt": "2025-02-12T11:29:47.171Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94e0",
+            "name": "Bosch",
+            "createdAt": "2025-02-12T11:29:46.234Z",
+            "updatedAt": "2025-02-12T11:29:46.234Z",
+            "__v": 0
+        },
+        "partNo": "P-1342",
+        "partDetail": "Lightweight",
+        "installedQuantity": 12,
+        "availableQuantity": 11,
+        "createdAt": "2025-02-12T11:29:48.122Z",
+        "updatedAt": "2025-02-12T11:29:48.122Z"
+    },
+    {
+        "_id": "67ac862c95ea0070635f9630",
+        "machine": {
+            "_id": "67ac862b95ea0070635f959d",
+            "name": "CNC Router",
+            "machineNo": "M-132",
+            "area": "67ac862995ea0070635f9471",
+            "createdAt": "2025-02-12T11:29:47.143Z",
+            "updatedAt": "2025-02-12T11:29:47.143Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94e2",
+            "name": "Fanuc",
+            "createdAt": "2025-02-12T11:29:46.236Z",
+            "updatedAt": "2025-02-12T11:29:46.236Z",
+            "__v": 0
+        },
+        "partNo": "P-9201",
+        "partDetail": "Standard",
+        "installedQuantity": 43,
+        "availableQuantity": 16,
+        "createdAt": "2025-02-12T11:29:48.107Z",
+        "updatedAt": "2025-02-12T11:29:48.107Z"
+    },
+    {
+        "_id": "67ac862c95ea0070635f9638",
+        "machine": {
+            "_id": "67ac862b95ea0070635f95a3",
+            "name": "CNC Router",
+            "machineNo": "M-270",
+            "area": "67ac862895ea0070635f9461",
+            "createdAt": "2025-02-12T11:29:47.150Z",
+            "updatedAt": "2025-02-12T11:29:47.150Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94dc",
+            "name": "Siemens",
+            "createdAt": "2025-02-12T11:29:46.228Z",
+            "updatedAt": "2025-02-12T11:29:46.228Z",
+            "__v": 0
+        },
+        "partNo": "P-4048",
+        "partDetail": "High precision",
+        "installedQuantity": 27,
+        "availableQuantity": 4,
+        "createdAt": "2025-02-12T11:29:48.131Z",
+        "updatedAt": "2025-02-12T11:29:48.131Z"
+    },
+    {
+        "_id": "67ac862c95ea0070635f963a",
+        "machine": {
+            "_id": "67ac862b95ea0070635f95ad",
+            "name": "Milling",
+            "machineNo": "M-236",
+            "area": "67ac862995ea0070635f9467",
+            "createdAt": "2025-02-12T11:29:47.173Z",
+            "updatedAt": "2025-02-12T11:29:47.173Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94dc",
+            "name": "Siemens",
+            "createdAt": "2025-02-12T11:29:46.228Z",
+            "updatedAt": "2025-02-12T11:29:46.228Z",
+            "__v": 0
+        },
+        "partNo": "P-4687",
+        "partDetail": "High precision",
+        "installedQuantity": 49,
+        "availableQuantity": 15,
+        "createdAt": "2025-02-12T11:29:48.135Z",
+        "updatedAt": "2025-02-12T11:29:48.135Z"
+    },
+    {
+        "_id": "67ac862c95ea0070635f962e",
+        "machine": {
+            "_id": "67ac862b95ea0070635f9589",
+            "name": "Milling",
+            "machineNo": "M-940",
+            "area": "67ac862995ea0070635f9467",
+            "createdAt": "2025-02-12T11:29:47.084Z",
+            "updatedAt": "2025-02-12T11:29:47.084Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94dc",
+            "name": "Siemens",
+            "createdAt": "2025-02-12T11:29:46.228Z",
+            "updatedAt": "2025-02-12T11:29:46.228Z",
+            "__v": 0
+        },
+        "partNo": "P-8378",
+        "partDetail": "Industrial grade",
+        "installedQuantity": 34,
+        "availableQuantity": 12,
+        "createdAt": "2025-02-12T11:29:48.102Z",
+        "updatedAt": "2025-02-12T11:29:48.102Z"
+    },
+    {
+        "_id": "67ac862c95ea0070635f9632",
+        "machine": {
+            "_id": "67ac862b95ea0070635f959f",
+            "name": "Grinding",
+            "machineNo": "M-985",
+            "area": "67ac862895ea0070635f9461",
+            "createdAt": "2025-02-12T11:29:47.144Z",
+            "updatedAt": "2025-02-12T11:29:47.144Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94dc",
+            "name": "Siemens",
+            "createdAt": "2025-02-12T11:29:46.228Z",
+            "updatedAt": "2025-02-12T11:29:46.228Z",
+            "__v": 0
+        },
+        "partNo": "P-2639",
+        "partDetail": "Heavy-duty",
+        "installedQuantity": 18,
+        "availableQuantity": 13,
+        "createdAt": "2025-02-12T11:29:48.112Z",
+        "updatedAt": "2025-02-12T11:29:48.112Z"
+    },
+    {
+        "_id": "67ac862c95ea0070635f962c",
+        "machine": {
+            "_id": "67ac862b95ea0070635f958b",
+            "name": "Drilling",
+            "machineNo": "M-597",
+            "area": "67ac862995ea0070635f9471",
+            "createdAt": "2025-02-12T11:29:47.086Z",
+            "updatedAt": "2025-02-12T11:29:47.086Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94e2",
+            "name": "Fanuc",
+            "createdAt": "2025-02-12T11:29:46.236Z",
+            "updatedAt": "2025-02-12T11:29:46.236Z",
+            "__v": 0
+        },
+        "partNo": "P-1657",
+        "partDetail": "Industrial grade",
+        "installedQuantity": 15,
+        "availableQuantity": 3,
+        "createdAt": "2025-02-12T11:29:48.098Z",
+        "updatedAt": "2025-02-12T11:29:48.098Z"
+    },
+    {
+        "_id": "67ac862c95ea0070635f9628",
+        "machine": {
+            "_id": "67ac862b95ea0070635f958d",
+            "name": "Drilling",
+            "machineNo": "M-179",
+            "area": "67ac862995ea0070635f946d",
+            "createdAt": "2025-02-12T11:29:47.087Z",
+            "updatedAt": "2025-02-12T11:29:47.087Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94e0",
+            "name": "Bosch",
+            "createdAt": "2025-02-12T11:29:46.234Z",
+            "updatedAt": "2025-02-12T11:29:46.234Z",
+            "__v": 0
+        },
+        "partNo": "P-5949",
+        "partDetail": "Industrial grade",
+        "installedQuantity": 7,
+        "availableQuantity": 2,
+        "createdAt": "2025-02-12T11:29:48.094Z",
+        "updatedAt": "2025-02-12T11:29:48.094Z"
+    },
+    {
+        "_id": "67ac862c95ea0070635f9648",
+        "machine": {
+            "_id": "67ac862b95ea0070635f95b3",
+            "name": "Lathe",
+            "machineNo": "M-441",
+            "area": "67ac862995ea0070635f946d",
+            "createdAt": "2025-02-12T11:29:47.194Z",
+            "updatedAt": "2025-02-12T11:29:47.194Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94da",
+            "name": "ABB",
+            "createdAt": "2025-02-12T11:29:46.222Z",
+            "updatedAt": "2025-02-12T11:29:46.222Z",
+            "__v": 0
+        },
+        "partNo": "P-8339",
+        "partDetail": "Industrial grade",
+        "installedQuantity": 50,
+        "availableQuantity": 22,
+        "createdAt": "2025-02-12T11:29:48.162Z",
+        "updatedAt": "2025-02-12T11:29:48.162Z"
+    },
+    {
+        "_id": "67ac862c95ea0070635f9640",
+        "machine": {
+            "_id": "67ac862b95ea0070635f95ab",
+            "name": "Drilling",
+            "machineNo": "M-782",
+            "area": "67ac862995ea0070635f9471",
+            "createdAt": "2025-02-12T11:29:47.172Z",
+            "updatedAt": "2025-02-12T11:29:47.172Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94da",
+            "name": "ABB",
+            "createdAt": "2025-02-12T11:29:46.222Z",
+            "updatedAt": "2025-02-12T11:29:46.222Z",
+            "__v": 0
+        },
+        "partNo": "P-4305",
+        "partDetail": "Lightweight",
+        "installedQuantity": 35,
+        "availableQuantity": 35,
+        "createdAt": "2025-02-12T11:29:48.146Z",
+        "updatedAt": "2025-02-12T11:29:48.146Z"
+    },
+    {
+        "_id": "67ac862c95ea0070635f963e",
+        "machine": {
+            "_id": "67ac862b95ea0070635f95af",
+            "name": "Milling",
+            "machineNo": "M-371",
+            "area": "67ac862995ea0070635f9467",
+            "createdAt": "2025-02-12T11:29:47.174Z",
+            "updatedAt": "2025-02-12T11:29:47.174Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94da",
+            "name": "ABB",
+            "createdAt": "2025-02-12T11:29:46.222Z",
+            "updatedAt": "2025-02-12T11:29:46.222Z",
+            "__v": 0
+        },
+        "partNo": "P-8562",
+        "partDetail": "Heavy-duty",
+        "installedQuantity": 44,
+        "availableQuantity": 36,
+        "createdAt": "2025-02-12T11:29:48.144Z",
+        "updatedAt": "2025-02-12T11:29:48.144Z"
+    },
+    {
+        "_id": "67ac862c95ea0070635f9644",
+        "machine": {
+            "_id": "67ac862b95ea0070635f95b1",
+            "name": "Milling",
+            "machineNo": "M-333",
+            "area": "67ac862995ea0070635f946d",
+            "createdAt": "2025-02-12T11:29:47.193Z",
+            "updatedAt": "2025-02-12T11:29:47.193Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94e0",
+            "name": "Bosch",
+            "createdAt": "2025-02-12T11:29:46.234Z",
+            "updatedAt": "2025-02-12T11:29:46.234Z",
+            "__v": 0
+        },
+        "partNo": "P-6145",
+        "partDetail": "Standard",
+        "installedQuantity": 14,
+        "availableQuantity": 6,
+        "createdAt": "2025-02-12T11:29:48.158Z",
+        "updatedAt": "2025-02-12T11:29:48.158Z"
+    },
+    {
+        "_id": "67ac862c95ea0070635f964e",
+        "machine": {
+            "_id": "67ac862a95ea0070635f9563",
+            "name": "Lathe",
+            "machineNo": "M-382",
+            "area": "67ac862995ea0070635f9471",
+            "createdAt": "2025-02-12T11:29:46.990Z",
+            "updatedAt": "2025-02-12T11:29:46.990Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862b95ea0070635f95f6",
+            "name": "Mitsubishi",
+            "createdAt": "2025-02-12T11:29:47.975Z",
+            "updatedAt": "2025-02-12T11:29:47.975Z",
+            "__v": 0
+        },
+        "partNo": "P-2280",
+        "partDetail": "Industrial grade",
+        "installedQuantity": 23,
+        "availableQuantity": 19,
+        "createdAt": "2025-02-12T11:29:48.212Z",
+        "updatedAt": "2025-02-12T11:29:48.212Z"
+    },
+    {
+        "_id": "67ac862c95ea0070635f964c",
+        "machine": {
+            "_id": "67ac862b95ea0070635f95ba",
+            "name": "Grinding",
+            "machineNo": "M-529",
+            "area": "67ac862995ea0070635f946d",
+            "createdAt": "2025-02-12T11:29:47.210Z",
+            "updatedAt": "2025-02-12T11:29:47.210Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94e2",
+            "name": "Fanuc",
+            "createdAt": "2025-02-12T11:29:46.236Z",
+            "updatedAt": "2025-02-12T11:29:46.236Z",
+            "__v": 0
+        },
+        "partNo": "P-3597",
+        "partDetail": "Industrial grade",
+        "installedQuantity": 43,
+        "availableQuantity": 4,
+        "createdAt": "2025-02-12T11:29:48.189Z",
+        "updatedAt": "2025-02-12T11:29:48.189Z"
+    },
+    {
+        "_id": "67ac862c95ea0070635f964a",
+        "machine": {
+            "_id": "67ac862b95ea0070635f95b7",
+            "name": "CNC Router",
+            "machineNo": "M-131",
+            "area": "67ac862895ea0070635f9465",
+            "createdAt": "2025-02-12T11:29:47.199Z",
+            "updatedAt": "2025-02-12T11:29:47.199Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94dc",
+            "name": "Siemens",
+            "createdAt": "2025-02-12T11:29:46.228Z",
+            "updatedAt": "2025-02-12T11:29:46.228Z",
+            "__v": 0
+        },
+        "partNo": "P-1398",
+        "partDetail": "Standard",
+        "installedQuantity": 47,
+        "availableQuantity": 29,
+        "createdAt": "2025-02-12T11:29:48.176Z",
+        "updatedAt": "2025-02-12T11:29:48.176Z"
+    },
+    {
+        "_id": "67acbf15c090d269401308ec",
+        "machine": {
+            "_id": "67ac862a95ea0070635f94cc",
+            "name": "Milling",
+            "machineNo": "M-754",
+            "area": "67ac862995ea0070635f946d",
+            "createdAt": "2025-02-12T11:29:46.128Z",
+            "updatedAt": "2025-02-12T11:29:46.128Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94dc",
+            "name": "Siemens",
+            "createdAt": "2025-02-12T11:29:46.228Z",
+            "updatedAt": "2025-02-12T11:29:46.228Z",
+            "__v": 0
+        },
+        "partNo": "P-2865",
+        "partDetail": "Industrial grade",
+        "installedQuantity": 29,
+        "availableQuantity": 17,
+        "createdAt": "2025-02-12T15:32:37.218Z",
+        "updatedAt": "2025-02-12T15:32:37.218Z"
+    },
+    {
+        "_id": "67acbf15c090d26940130905",
+        "machine": {
+            "_id": "67ac862a95ea0070635f94d2",
+            "name": "Lathe",
+            "machineNo": "M-182",
+            "area": "67ac862895ea0070635f9461",
+            "createdAt": "2025-02-12T11:29:46.152Z",
+            "updatedAt": "2025-02-12T11:29:46.152Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94e2",
+            "name": "Fanuc",
+            "createdAt": "2025-02-12T11:29:46.236Z",
+            "updatedAt": "2025-02-12T11:29:46.236Z",
+            "__v": 0
+        },
+        "partNo": "P-3387",
+        "partDetail": "Heavy-duty",
+        "installedQuantity": 42,
+        "availableQuantity": 21,
+        "createdAt": "2025-02-12T15:32:37.352Z",
+        "updatedAt": "2025-02-12T15:32:37.352Z"
+    },
+    {
+        "_id": "67acbf15c090d2694013091b",
+        "machine": {
+            "_id": "67acbf14c090d2694013088e",
+            "name": "Milling",
+            "machineNo": "M-991",
+            "area": "67ac862895ea0070635f9465",
+            "createdAt": "2025-02-12T15:32:36.856Z",
+            "updatedAt": "2025-02-12T15:32:36.856Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94e0",
+            "name": "Bosch",
+            "createdAt": "2025-02-12T11:29:46.234Z",
+            "updatedAt": "2025-02-12T11:29:46.234Z",
+            "__v": 0
+        },
+        "partNo": "P-1366",
+        "partDetail": "High precision",
+        "installedQuantity": 41,
+        "availableQuantity": 15,
+        "createdAt": "2025-02-12T15:32:37.490Z",
+        "updatedAt": "2025-02-12T15:32:37.490Z"
+    },
+    {
+        "_id": "67acbf15c090d2694013091f",
+        "machine": {
+            "_id": "67acbf14c090d26940130895",
+            "name": "Grinding",
+            "machineNo": "M-210",
+            "area": "67ac862895ea0070635f9465",
+            "createdAt": "2025-02-12T15:32:36.900Z",
+            "updatedAt": "2025-02-12T15:32:36.900Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94e0",
+            "name": "Bosch",
+            "createdAt": "2025-02-12T11:29:46.234Z",
+            "updatedAt": "2025-02-12T11:29:46.234Z",
+            "__v": 0
+        },
+        "partNo": "P-1450",
+        "partDetail": "Heavy-duty",
+        "installedQuantity": 29,
+        "availableQuantity": 3,
+        "createdAt": "2025-02-12T15:32:37.494Z",
+        "updatedAt": "2025-02-12T15:32:37.494Z"
+    },
+    {
+        "_id": "67acbf15c090d2694013091d",
+        "machine": {
+            "_id": "67acbf14c090d26940130892",
+            "name": "Grinding",
+            "machineNo": "M-837",
+            "area": "67ac862895ea0070635f9465",
+            "createdAt": "2025-02-12T15:32:36.877Z",
+            "updatedAt": "2025-02-12T15:32:36.877Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94e0",
+            "name": "Bosch",
+            "createdAt": "2025-02-12T11:29:46.234Z",
+            "updatedAt": "2025-02-12T11:29:46.234Z",
+            "__v": 0
+        },
+        "partNo": "P-3371",
+        "partDetail": "Lightweight",
+        "installedQuantity": 6,
+        "availableQuantity": 2,
+        "createdAt": "2025-02-12T15:32:37.492Z",
+        "updatedAt": "2025-02-12T15:32:37.492Z"
+    },
+    {
+        "_id": "67acbf15c090d26940130921",
+        "machine": {
+            "_id": "67acbf14c090d26940130897",
+            "name": "Drilling",
+            "machineNo": "M-325",
+            "area": "67ac862995ea0070635f9471",
+            "createdAt": "2025-02-12T15:32:36.908Z",
+            "updatedAt": "2025-02-12T15:32:36.908Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94e2",
+            "name": "Fanuc",
+            "createdAt": "2025-02-12T11:29:46.236Z",
+            "updatedAt": "2025-02-12T11:29:46.236Z",
+            "__v": 0
+        },
+        "partNo": "P-8271",
+        "partDetail": "High precision",
+        "installedQuantity": 9,
+        "availableQuantity": 9,
+        "createdAt": "2025-02-12T15:32:37.501Z",
+        "updatedAt": "2025-02-12T15:32:37.501Z"
+    },
+    {
+        "_id": "67acbf15c090d26940130925",
+        "machine": {
+            "_id": "67acbf14c090d2694013089e",
+            "name": "Milling",
+            "machineNo": "M-216",
+            "area": "67ac862995ea0070635f9467",
+            "createdAt": "2025-02-12T15:32:36.944Z",
+            "updatedAt": "2025-02-12T15:32:36.944Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94e0",
+            "name": "Bosch",
+            "createdAt": "2025-02-12T11:29:46.234Z",
+            "updatedAt": "2025-02-12T11:29:46.234Z",
+            "__v": 0
+        },
+        "partNo": "P-7781",
+        "partDetail": "Industrial grade",
+        "installedQuantity": 37,
+        "availableQuantity": 21,
+        "createdAt": "2025-02-12T15:32:37.532Z",
+        "updatedAt": "2025-02-12T15:32:37.532Z"
+    },
+    {
+        "_id": "67acbf15c090d26940130927",
+        "machine": {
+            "_id": "67acbf14c090d269401308a3",
+            "name": "CNC Router",
+            "machineNo": "M-425",
+            "area": "67ac862995ea0070635f9467",
+            "createdAt": "2025-02-12T15:32:36.955Z",
+            "updatedAt": "2025-02-12T15:32:36.955Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94e2",
+            "name": "Fanuc",
+            "createdAt": "2025-02-12T11:29:46.236Z",
+            "updatedAt": "2025-02-12T11:29:46.236Z",
+            "__v": 0
+        },
+        "partNo": "P-9389",
+        "partDetail": "High precision",
+        "installedQuantity": 4,
+        "availableQuantity": 1,
+        "createdAt": "2025-02-12T15:32:37.536Z",
+        "updatedAt": "2025-02-12T15:32:37.536Z"
+    },
+    {
+        "_id": "67acbf15c090d26940130929",
+        "machine": {
+            "_id": "67acbf14c090d269401308a1",
+            "name": "Lathe",
+            "machineNo": "M-945",
+            "area": "67ac862995ea0070635f9471",
+            "createdAt": "2025-02-12T15:32:36.951Z",
+            "updatedAt": "2025-02-12T15:32:36.951Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94e0",
+            "name": "Bosch",
+            "createdAt": "2025-02-12T11:29:46.234Z",
+            "updatedAt": "2025-02-12T11:29:46.234Z",
+            "__v": 0
+        },
+        "partNo": "P-1477",
+        "partDetail": "Standard",
+        "installedQuantity": 34,
+        "availableQuantity": 3,
+        "createdAt": "2025-02-12T15:32:37.538Z",
+        "updatedAt": "2025-02-12T15:32:37.538Z"
+    },
+    {
+        "_id": "67acbf15c090d2694013092b",
+        "machine": {
+            "_id": "67acbf14c090d269401308a6",
+            "name": "Grinding",
+            "machineNo": "M-505",
+            "area": "67ac862895ea0070635f9461",
+            "createdAt": "2025-02-12T15:32:36.972Z",
+            "updatedAt": "2025-02-12T15:32:36.972Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94e0",
+            "name": "Bosch",
+            "createdAt": "2025-02-12T11:29:46.234Z",
+            "updatedAt": "2025-02-12T11:29:46.234Z",
+            "__v": 0
+        },
+        "partNo": "P-5162",
+        "partDetail": "Heavy-duty",
+        "installedQuantity": 26,
+        "availableQuantity": 26,
+        "createdAt": "2025-02-12T15:32:37.543Z",
+        "updatedAt": "2025-02-12T15:32:37.543Z"
+    },
+    {
+        "_id": "67acbf15c090d2694013092d",
+        "machine": {
+            "_id": "67acbf15c090d269401308ac",
+            "name": "Drilling",
+            "machineNo": "M-569",
+            "area": "67ac862995ea0070635f946d",
+            "createdAt": "2025-02-12T15:32:37.002Z",
+            "updatedAt": "2025-02-12T15:32:37.002Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94da",
+            "name": "ABB",
+            "createdAt": "2025-02-12T11:29:46.222Z",
+            "updatedAt": "2025-02-12T11:29:46.222Z",
+            "__v": 0
+        },
+        "partNo": "P-2937",
+        "partDetail": "Industrial grade",
+        "installedQuantity": 37,
+        "availableQuantity": 20,
+        "createdAt": "2025-02-12T15:32:37.547Z",
+        "updatedAt": "2025-02-12T15:32:37.547Z"
+    },
+    {
+        "_id": "67acbf16c090d26940130930",
+        "machine": {
+            "_id": "67acbf15c090d269401308b0",
+            "name": "Drilling",
+            "machineNo": "M-100",
+            "area": "67ac862995ea0070635f9471",
+            "createdAt": "2025-02-12T15:32:37.004Z",
+            "updatedAt": "2025-02-12T15:32:37.004Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94e0",
+            "name": "Bosch",
+            "createdAt": "2025-02-12T11:29:46.234Z",
+            "updatedAt": "2025-02-12T11:29:46.234Z",
+            "__v": 0
+        },
+        "partNo": "P-4337",
+        "partDetail": "Industrial grade",
+        "installedQuantity": 3,
+        "availableQuantity": 1,
+        "createdAt": "2025-02-12T15:32:38.035Z",
+        "updatedAt": "2025-02-12T15:32:38.035Z"
+    },
+    {
+        "_id": "67acbf16c090d26940130934",
+        "machine": {
+            "_id": "67acbf15c090d269401308b2",
+            "name": "Milling",
+            "machineNo": "M-570",
+            "area": "67ac862895ea0070635f9461",
+            "createdAt": "2025-02-12T15:32:37.018Z",
+            "updatedAt": "2025-02-12T15:32:37.018Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94dc",
+            "name": "Siemens",
+            "createdAt": "2025-02-12T11:29:46.228Z",
+            "updatedAt": "2025-02-12T11:29:46.228Z",
+            "__v": 0
+        },
+        "partNo": "P-3715",
+        "partDetail": "Lightweight",
+        "installedQuantity": 47,
+        "availableQuantity": 9,
+        "createdAt": "2025-02-12T15:32:38.038Z",
+        "updatedAt": "2025-02-12T15:32:38.038Z"
+    },
+    {
+        "_id": "67acbf16c090d26940130932",
+        "machine": {
+            "_id": "67acbf15c090d269401308b4",
+            "name": "Milling",
+            "machineNo": "M-604",
+            "area": "67ac862995ea0070635f946d",
+            "createdAt": "2025-02-12T15:32:37.019Z",
+            "updatedAt": "2025-02-12T15:32:37.019Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94da",
+            "name": "ABB",
+            "createdAt": "2025-02-12T11:29:46.222Z",
+            "updatedAt": "2025-02-12T11:29:46.222Z",
+            "__v": 0
+        },
+        "partNo": "P-7391",
+        "partDetail": "High precision",
+        "installedQuantity": 44,
+        "availableQuantity": 2,
+        "createdAt": "2025-02-12T15:32:38.036Z",
+        "updatedAt": "2025-02-12T15:32:38.036Z"
+    },
+    {
+        "_id": "67acbf16c090d26940130936",
+        "machine": {
+            "_id": "67acbf14c090d269401308a8",
+            "name": "Drilling",
+            "machineNo": "M-234",
+            "area": "67ac862995ea0070635f9471",
+            "createdAt": "2025-02-12T15:32:36.986Z",
+            "updatedAt": "2025-02-12T15:32:36.986Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94dc",
+            "name": "Siemens",
+            "createdAt": "2025-02-12T11:29:46.228Z",
+            "updatedAt": "2025-02-12T11:29:46.228Z",
+            "__v": 0
+        },
+        "partNo": "P-6625",
+        "partDetail": "Industrial grade",
+        "installedQuantity": 25,
+        "availableQuantity": 9,
+        "createdAt": "2025-02-12T15:32:38.039Z",
+        "updatedAt": "2025-02-12T15:32:38.039Z"
+    },
+    {
+        "_id": "67acbf16c090d2694013093c",
+        "machine": {
+            "_id": "67acbf15c090d269401308b6",
+            "name": "CNC Router",
+            "machineNo": "M-224",
+            "area": "67ac862995ea0070635f9471",
+            "createdAt": "2025-02-12T15:32:37.028Z",
+            "updatedAt": "2025-02-12T15:32:37.028Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94e2",
+            "name": "Fanuc",
+            "createdAt": "2025-02-12T11:29:46.236Z",
+            "updatedAt": "2025-02-12T11:29:46.236Z",
+            "__v": 0
+        },
+        "partNo": "P-3499",
+        "partDetail": "Industrial grade",
+        "installedQuantity": 24,
+        "availableQuantity": 20,
+        "createdAt": "2025-02-12T15:32:38.041Z",
+        "updatedAt": "2025-02-12T15:32:38.041Z"
+    },
+    {
+        "_id": "67acbf16c090d26940130938",
+        "machine": {
+            "_id": "67acbf15c090d269401308bb",
+            "name": "CNC Router",
+            "machineNo": "M-517",
+            "area": "67ac862895ea0070635f9461",
+            "createdAt": "2025-02-12T15:32:37.050Z",
+            "updatedAt": "2025-02-12T15:32:37.050Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94da",
+            "name": "ABB",
+            "createdAt": "2025-02-12T11:29:46.222Z",
+            "updatedAt": "2025-02-12T11:29:46.222Z",
+            "__v": 0
+        },
+        "partNo": "P-2225",
+        "partDetail": "Lightweight",
+        "installedQuantity": 11,
+        "availableQuantity": 10,
+        "createdAt": "2025-02-12T15:32:38.040Z",
+        "updatedAt": "2025-02-12T15:32:38.040Z"
+    },
+    {
+        "_id": "67acbf16c090d2694013093a",
+        "machine": {
+            "_id": "67acbf15c090d269401308ae",
+            "name": "Lathe",
+            "machineNo": "M-356",
+            "area": "67ac862895ea0070635f9465",
+            "createdAt": "2025-02-12T15:32:37.003Z",
+            "updatedAt": "2025-02-12T15:32:37.003Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94e2",
+            "name": "Fanuc",
+            "createdAt": "2025-02-12T11:29:46.236Z",
+            "updatedAt": "2025-02-12T11:29:46.236Z",
+            "__v": 0
+        },
+        "partNo": "P-3609",
+        "partDetail": "Heavy-duty",
+        "installedQuantity": 48,
+        "availableQuantity": 45,
+        "createdAt": "2025-02-12T15:32:38.041Z",
+        "updatedAt": "2025-02-12T15:32:38.041Z"
+    },
+    {
+        "_id": "67acbf16c090d2694013093f",
+        "machine": {
+            "_id": "67acbf15c090d269401308c6",
+            "name": "Lathe",
+            "machineNo": "M-268",
+            "area": "67ac862995ea0070635f9467",
+            "createdAt": "2025-02-12T15:32:37.093Z",
+            "updatedAt": "2025-02-12T15:32:37.093Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94da",
+            "name": "ABB",
+            "createdAt": "2025-02-12T11:29:46.222Z",
+            "updatedAt": "2025-02-12T11:29:46.222Z",
+            "__v": 0
+        },
+        "partNo": "P-5010",
+        "partDetail": "Standard",
+        "installedQuantity": 5,
+        "availableQuantity": 1,
+        "createdAt": "2025-02-12T15:32:38.077Z",
+        "updatedAt": "2025-02-12T15:32:38.077Z"
+    },
+    {
+        "_id": "67acbf16c090d26940130941",
+        "machine": {
+            "_id": "67acbf15c090d269401308c2",
+            "name": "Milling",
+            "machineNo": "M-486",
+            "area": "67ac862895ea0070635f9461",
+            "createdAt": "2025-02-12T15:32:37.071Z",
+            "updatedAt": "2025-02-12T15:32:37.071Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862b95ea0070635f95f6",
+            "name": "Mitsubishi",
+            "createdAt": "2025-02-12T11:29:47.975Z",
+            "updatedAt": "2025-02-12T11:29:47.975Z",
+            "__v": 0
+        },
+        "partNo": "P-6522",
+        "partDetail": "Heavy-duty",
+        "installedQuantity": 8,
+        "availableQuantity": 6,
+        "createdAt": "2025-02-12T15:32:38.079Z",
+        "updatedAt": "2025-02-12T15:32:38.079Z"
+    },
+    {
+        "_id": "67acbf16c090d26940130943",
+        "machine": {
+            "_id": "67acbf15c090d269401308d0",
+            "name": "CNC Router",
+            "machineNo": "M-365",
+            "area": "67ac862895ea0070635f9461",
+            "createdAt": "2025-02-12T15:32:37.112Z",
+            "updatedAt": "2025-02-12T15:32:37.112Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862b95ea0070635f95f6",
+            "name": "Mitsubishi",
+            "createdAt": "2025-02-12T11:29:47.975Z",
+            "updatedAt": "2025-02-12T11:29:47.975Z",
+            "__v": 0
+        },
+        "partNo": "P-8975",
+        "partDetail": "High precision",
+        "installedQuantity": 16,
+        "availableQuantity": 5,
+        "createdAt": "2025-02-12T15:32:38.080Z",
+        "updatedAt": "2025-02-12T15:32:38.080Z"
+    },
+    {
+        "_id": "67acbf16c090d26940130947",
+        "machine": {
+            "_id": "67acbf15c090d269401308c4",
+            "name": "CNC Router",
+            "machineNo": "M-808",
+            "area": "67ac862995ea0070635f9467",
+            "createdAt": "2025-02-12T15:32:37.092Z",
+            "updatedAt": "2025-02-12T15:32:37.092Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94e2",
+            "name": "Fanuc",
+            "createdAt": "2025-02-12T11:29:46.236Z",
+            "updatedAt": "2025-02-12T11:29:46.236Z",
+            "__v": 0
+        },
+        "partNo": "P-1670",
+        "partDetail": "Heavy-duty",
+        "installedQuantity": 8,
+        "availableQuantity": 0,
+        "createdAt": "2025-02-12T15:32:38.082Z",
+        "updatedAt": "2025-02-12T15:32:38.082Z"
+    },
+    {
+        "_id": "67acbf16c090d26940130945",
+        "machine": {
+            "_id": "67acbf15c090d269401308c8",
+            "name": "Grinding",
+            "machineNo": "M-856",
+            "area": "67ac862995ea0070635f946d",
+            "createdAt": "2025-02-12T15:32:37.096Z",
+            "updatedAt": "2025-02-12T15:32:37.096Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94dc",
+            "name": "Siemens",
+            "createdAt": "2025-02-12T11:29:46.228Z",
+            "updatedAt": "2025-02-12T11:29:46.228Z",
+            "__v": 0
+        },
+        "partNo": "P-9951",
+        "partDetail": "Lightweight",
+        "installedQuantity": 30,
+        "availableQuantity": 29,
+        "createdAt": "2025-02-12T15:32:38.081Z",
+        "updatedAt": "2025-02-12T15:32:38.081Z"
+    },
+    {
+        "_id": "67acbf16c090d26940130949",
+        "machine": {
+            "_id": "67acbf15c090d269401308ca",
+            "name": "Drilling",
+            "machineNo": "M-479",
+            "area": "67ac862895ea0070635f9461",
+            "createdAt": "2025-02-12T15:32:37.103Z",
+            "updatedAt": "2025-02-12T15:32:37.103Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862b95ea0070635f95f6",
+            "name": "Mitsubishi",
+            "createdAt": "2025-02-12T11:29:47.975Z",
+            "updatedAt": "2025-02-12T11:29:47.975Z",
+            "__v": 0
+        },
+        "partNo": "P-9615",
+        "partDetail": "Industrial grade",
+        "installedQuantity": 31,
+        "availableQuantity": 18,
+        "createdAt": "2025-02-12T15:32:38.088Z",
+        "updatedAt": "2025-02-12T15:32:38.088Z"
+    },
+    {
+        "_id": "67acbf16c090d2694013094b",
+        "machine": {
+            "_id": "67acbf15c090d269401308ce",
+            "name": "Grinding",
+            "machineNo": "M-600",
+            "area": "67ac862895ea0070635f9465",
+            "createdAt": "2025-02-12T15:32:37.108Z",
+            "updatedAt": "2025-02-12T15:32:37.108Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94e2",
+            "name": "Fanuc",
+            "createdAt": "2025-02-12T11:29:46.236Z",
+            "updatedAt": "2025-02-12T11:29:46.236Z",
+            "__v": 0
+        },
+        "partNo": "P-7971",
+        "partDetail": "High precision",
+        "installedQuantity": 6,
+        "availableQuantity": 5,
+        "createdAt": "2025-02-12T15:32:38.089Z",
+        "updatedAt": "2025-02-12T15:32:38.089Z"
+    },
+    {
+        "_id": "67acbf16c090d2694013094f",
+        "machine": {
+            "_id": "67acbf15c090d269401308d2",
+            "name": "Drilling",
+            "machineNo": "M-419",
+            "area": "67ac862995ea0070635f946d",
+            "createdAt": "2025-02-12T15:32:37.136Z",
+            "updatedAt": "2025-02-12T15:32:37.136Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94da",
+            "name": "ABB",
+            "createdAt": "2025-02-12T11:29:46.222Z",
+            "updatedAt": "2025-02-12T11:29:46.222Z",
+            "__v": 0
+        },
+        "partNo": "P-3491",
+        "partDetail": "Standard",
+        "installedQuantity": 1,
+        "availableQuantity": 1,
+        "createdAt": "2025-02-12T15:32:38.091Z",
+        "updatedAt": "2025-02-12T15:32:38.091Z"
+    },
+    {
+        "_id": "67acbf16c090d2694013094d",
+        "machine": {
+            "_id": "67acbf15c090d269401308d4",
+            "name": "Milling",
+            "machineNo": "M-530",
+            "area": "67ac862895ea0070635f9465",
+            "createdAt": "2025-02-12T15:32:37.142Z",
+            "updatedAt": "2025-02-12T15:32:37.142Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862b95ea0070635f95f6",
+            "name": "Mitsubishi",
+            "createdAt": "2025-02-12T11:29:47.975Z",
+            "updatedAt": "2025-02-12T11:29:47.975Z",
+            "__v": 0
+        },
+        "partNo": "P-8704",
+        "partDetail": "Industrial grade",
+        "installedQuantity": 20,
+        "availableQuantity": 0,
+        "createdAt": "2025-02-12T15:32:38.090Z",
+        "updatedAt": "2025-02-12T15:32:38.090Z"
+    },
+    {
+        "_id": "67acbf16c090d26940130951",
+        "machine": {
+            "_id": "67acbf15c090d269401308cc",
+            "name": "CNC Router",
+            "machineNo": "M-561",
+            "area": "67ac862995ea0070635f9467",
+            "createdAt": "2025-02-12T15:32:37.104Z",
+            "updatedAt": "2025-02-12T15:32:37.104Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862b95ea0070635f95f6",
+            "name": "Mitsubishi",
+            "createdAt": "2025-02-12T11:29:47.975Z",
+            "updatedAt": "2025-02-12T11:29:47.975Z",
+            "__v": 0
+        },
+        "partNo": "P-4557",
+        "partDetail": "Standard",
+        "installedQuantity": 8,
+        "availableQuantity": 3,
+        "createdAt": "2025-02-12T15:32:38.093Z",
+        "updatedAt": "2025-02-12T15:32:38.093Z"
+    },
+    {
+        "_id": "67acbf16c090d26940130953",
+        "machine": {
+            "_id": "67acbf15c090d269401308d6",
+            "name": "Milling",
+            "machineNo": "M-641",
+            "area": "67ac862895ea0070635f9461",
+            "createdAt": "2025-02-12T15:32:37.144Z",
+            "updatedAt": "2025-02-12T15:32:37.144Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94dc",
+            "name": "Siemens",
+            "createdAt": "2025-02-12T11:29:46.228Z",
+            "updatedAt": "2025-02-12T11:29:46.228Z",
+            "__v": 0
+        },
+        "partNo": "P-4099",
+        "partDetail": "Heavy-duty",
+        "installedQuantity": 12,
+        "availableQuantity": 3,
+        "createdAt": "2025-02-12T15:32:38.119Z",
+        "updatedAt": "2025-02-12T15:32:38.119Z"
+    },
+    {
+        "_id": "67acbf16c090d26940130955",
+        "machine": {
+            "_id": "67acbf15c090d269401308d8",
+            "name": "Milling",
+            "machineNo": "M-970",
+            "area": "67ac862995ea0070635f9467",
+            "createdAt": "2025-02-12T15:32:37.146Z",
+            "updatedAt": "2025-02-12T15:32:37.146Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94dc",
+            "name": "Siemens",
+            "createdAt": "2025-02-12T11:29:46.228Z",
+            "updatedAt": "2025-02-12T11:29:46.228Z",
+            "__v": 0
+        },
+        "partNo": "P-1278",
+        "partDetail": "Standard",
+        "installedQuantity": 37,
+        "availableQuantity": 18,
+        "createdAt": "2025-02-12T15:32:38.122Z",
+        "updatedAt": "2025-02-12T15:32:38.122Z"
+    },
+    {
+        "_id": "67acbf16c090d26940130957",
+        "machine": {
+            "_id": "67acbf15c090d269401308da",
+            "name": "Drilling",
+            "machineNo": "M-526",
+            "area": "67ac862895ea0070635f9465",
+            "createdAt": "2025-02-12T15:32:37.149Z",
+            "updatedAt": "2025-02-12T15:32:37.149Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94dc",
+            "name": "Siemens",
+            "createdAt": "2025-02-12T11:29:46.228Z",
+            "updatedAt": "2025-02-12T11:29:46.228Z",
+            "__v": 0
+        },
+        "partNo": "P-6884",
+        "partDetail": "Industrial grade",
+        "installedQuantity": 18,
+        "availableQuantity": 7,
+        "createdAt": "2025-02-12T15:32:38.125Z",
+        "updatedAt": "2025-02-12T15:32:38.125Z"
+    },
+    {
+        "_id": "67acbf16c090d26940130959",
+        "machine": {
+            "_id": "67acbf15c090d269401308dc",
+            "name": "Grinding",
+            "machineNo": "M-657",
+            "area": "67ac862895ea0070635f9461",
+            "createdAt": "2025-02-12T15:32:37.161Z",
+            "updatedAt": "2025-02-12T15:32:37.161Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94e2",
+            "name": "Fanuc",
+            "createdAt": "2025-02-12T11:29:46.236Z",
+            "updatedAt": "2025-02-12T11:29:46.236Z",
+            "__v": 0
+        },
+        "partNo": "P-8351",
+        "partDetail": "Industrial grade",
+        "installedQuantity": 29,
+        "availableQuantity": 24,
+        "createdAt": "2025-02-12T15:32:38.126Z",
+        "updatedAt": "2025-02-12T15:32:38.126Z"
+    },
+    {
+        "_id": "67acbf16c090d2694013095b",
+        "machine": {
+            "_id": "67acbf15c090d269401308de",
+            "name": "Grinding",
+            "machineNo": "M-963",
+            "area": "67ac862895ea0070635f9461",
+            "createdAt": "2025-02-12T15:32:37.167Z",
+            "updatedAt": "2025-02-12T15:32:37.167Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94da",
+            "name": "ABB",
+            "createdAt": "2025-02-12T11:29:46.222Z",
+            "updatedAt": "2025-02-12T11:29:46.222Z",
+            "__v": 0
+        },
+        "partNo": "P-7601",
+        "partDetail": "Standard",
+        "installedQuantity": 12,
+        "availableQuantity": 5,
+        "createdAt": "2025-02-12T15:32:38.128Z",
+        "updatedAt": "2025-02-12T15:32:38.128Z"
+    },
+    {
+        "_id": "67acbf16c090d2694013095f",
+        "machine": {
+            "_id": "67acbf15c090d269401308e2",
+            "name": "Milling",
+            "machineNo": "M-431",
+            "area": "67ac862995ea0070635f9471",
+            "createdAt": "2025-02-12T15:32:37.187Z",
+            "updatedAt": "2025-02-12T15:32:37.187Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94e0",
+            "name": "Bosch",
+            "createdAt": "2025-02-12T11:29:46.234Z",
+            "updatedAt": "2025-02-12T11:29:46.234Z",
+            "__v": 0
+        },
+        "partNo": "P-6438",
+        "partDetail": "Heavy-duty",
+        "installedQuantity": 32,
+        "availableQuantity": 13,
+        "createdAt": "2025-02-12T15:32:38.133Z",
+        "updatedAt": "2025-02-12T15:32:38.133Z"
+    },
+    {
+        "_id": "67acbf16c090d2694013095d",
+        "machine": {
+            "_id": "67acbf15c090d269401308e0",
+            "name": "Grinding",
+            "machineNo": "M-659",
+            "area": "67ac862995ea0070635f9467",
+            "createdAt": "2025-02-12T15:32:37.177Z",
+            "updatedAt": "2025-02-12T15:32:37.177Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94e0",
+            "name": "Bosch",
+            "createdAt": "2025-02-12T11:29:46.234Z",
+            "updatedAt": "2025-02-12T11:29:46.234Z",
+            "__v": 0
+        },
+        "partNo": "P-6219",
+        "partDetail": "Industrial grade",
+        "installedQuantity": 19,
+        "availableQuantity": 1,
+        "createdAt": "2025-02-12T15:32:38.132Z",
+        "updatedAt": "2025-02-12T15:32:38.132Z"
+    },
+    {
+        "_id": "67acbf16c090d26940130961",
+        "machine": {
+            "_id": "67acbf15c090d269401308f4",
+            "name": "Milling",
+            "machineNo": "M-165",
+            "area": "67ac862995ea0070635f9471",
+            "createdAt": "2025-02-12T15:32:37.254Z",
+            "updatedAt": "2025-02-12T15:32:37.254Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94e0",
+            "name": "Bosch",
+            "createdAt": "2025-02-12T11:29:46.234Z",
+            "updatedAt": "2025-02-12T11:29:46.234Z",
+            "__v": 0
+        },
+        "partNo": "P-2598",
+        "partDetail": "Lightweight",
+        "installedQuantity": 40,
+        "availableQuantity": 27,
+        "createdAt": "2025-02-12T15:32:38.166Z",
+        "updatedAt": "2025-02-12T15:32:38.166Z"
+    },
+    {
+        "_id": "67acbf16c090d26940130963",
+        "machine": {
+            "_id": "67acbf15c090d269401308f2",
+            "name": "Lathe",
+            "machineNo": "M-873",
+            "area": "67ac862995ea0070635f946d",
+            "createdAt": "2025-02-12T15:32:37.243Z",
+            "updatedAt": "2025-02-12T15:32:37.243Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94da",
+            "name": "ABB",
+            "createdAt": "2025-02-12T11:29:46.222Z",
+            "updatedAt": "2025-02-12T11:29:46.222Z",
+            "__v": 0
+        },
+        "partNo": "P-9013",
+        "partDetail": "Lightweight",
+        "installedQuantity": 39,
+        "availableQuantity": 36,
+        "createdAt": "2025-02-12T15:32:38.177Z",
+        "updatedAt": "2025-02-12T15:32:38.177Z"
+    },
+    {
+        "_id": "67acbf16c090d26940130965",
+        "machine": {
+            "_id": "67acbf15c090d269401308fb",
+            "name": "Drilling",
+            "machineNo": "M-724",
+            "area": "67ac862995ea0070635f9471",
+            "createdAt": "2025-02-12T15:32:37.288Z",
+            "updatedAt": "2025-02-12T15:32:37.288Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862b95ea0070635f95f6",
+            "name": "Mitsubishi",
+            "createdAt": "2025-02-12T11:29:47.975Z",
+            "updatedAt": "2025-02-12T11:29:47.975Z",
+            "__v": 0
+        },
+        "partNo": "P-2918",
+        "partDetail": "Heavy-duty",
+        "installedQuantity": 4,
+        "availableQuantity": 2,
+        "createdAt": "2025-02-12T15:32:38.190Z",
+        "updatedAt": "2025-02-12T15:32:38.190Z"
+    },
+    {
+        "_id": "67acbf16c090d26940130967",
+        "machine": {
+            "_id": "67acbf14c090d2694013089a",
+            "name": "Lathe",
+            "machineNo": "M-510",
+            "area": "67ac862995ea0070635f9471",
+            "createdAt": "2025-02-12T15:32:36.920Z",
+            "updatedAt": "2025-02-12T15:32:36.920Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862a95ea0070635f94e2",
+            "name": "Fanuc",
+            "createdAt": "2025-02-12T11:29:46.236Z",
+            "updatedAt": "2025-02-12T11:29:46.236Z",
+            "__v": 0
+        },
+        "partNo": "P-1371",
+        "partDetail": "Lightweight",
+        "installedQuantity": 46,
+        "availableQuantity": 36,
+        "createdAt": "2025-02-12T15:32:38.230Z",
+        "updatedAt": "2025-02-12T15:32:38.230Z"
+    },
+    {
+        "_id": "67acbf17c090d26940130a1e",
+        "machine": {
+            "_id": "67ac862b95ea0070635f9577",
+            "name": "Grinding",
+            "machineNo": "M-652",
+            "area": "67ac862995ea0070635f9471",
+            "createdAt": "2025-02-12T11:29:47.040Z",
+            "updatedAt": "2025-02-12T11:29:47.040Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862b95ea0070635f95f6",
+            "name": "Mitsubishi",
+            "createdAt": "2025-02-12T11:29:47.975Z",
+            "updatedAt": "2025-02-12T11:29:47.975Z",
+            "__v": 0
+        },
+        "partNo": "P-3285",
+        "partDetail": "High precision",
+        "installedQuantity": 26,
+        "availableQuantity": 6,
+        "createdAt": "2025-02-12T15:32:39.406Z",
+        "updatedAt": "2025-02-12T15:32:39.406Z"
+    },
+    {
+        "_id": "67acbf17c090d26940130a28",
+        "machine": {
+            "_id": "67ac862b95ea0070635f957b",
+            "name": "Milling",
+            "machineNo": "M-809",
+            "area": "67ac862995ea0070635f946d",
+            "createdAt": "2025-02-12T11:29:47.047Z",
+            "updatedAt": "2025-02-12T11:29:47.047Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862b95ea0070635f95f6",
+            "name": "Mitsubishi",
+            "createdAt": "2025-02-12T11:29:47.975Z",
+            "updatedAt": "2025-02-12T11:29:47.975Z",
+            "__v": 0
+        },
+        "partNo": "P-5868",
+        "partDetail": "Heavy-duty",
+        "installedQuantity": 36,
+        "availableQuantity": 34,
+        "createdAt": "2025-02-12T15:32:39.445Z",
+        "updatedAt": "2025-02-12T15:32:39.445Z"
+    },
+    {
+        "_id": "67acbf17c090d26940130a2c",
+        "machine": {
+            "_id": "67ac862b95ea0070635f957f",
+            "name": "Lathe",
+            "machineNo": "M-768",
+            "area": "67ac862995ea0070635f9471",
+            "createdAt": "2025-02-12T11:29:47.051Z",
+            "updatedAt": "2025-02-12T11:29:47.051Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862b95ea0070635f95f6",
+            "name": "Mitsubishi",
+            "createdAt": "2025-02-12T11:29:47.975Z",
+            "updatedAt": "2025-02-12T11:29:47.975Z",
+            "__v": 0
+        },
+        "partNo": "P-8749",
+        "partDetail": "Lightweight",
+        "installedQuantity": 26,
+        "availableQuantity": 5,
+        "createdAt": "2025-02-12T15:32:39.450Z",
+        "updatedAt": "2025-02-12T15:32:39.450Z"
+    },
+    {
+        "_id": "67acbf17c090d26940130a32",
+        "machine": {
+            "_id": "67ac862b95ea0070635f9587",
+            "name": "Lathe",
+            "machineNo": "M-920",
+            "area": "67ac862995ea0070635f9467",
+            "createdAt": "2025-02-12T11:29:47.080Z",
+            "updatedAt": "2025-02-12T11:29:47.080Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862b95ea0070635f95f6",
+            "name": "Mitsubishi",
+            "createdAt": "2025-02-12T11:29:47.975Z",
+            "updatedAt": "2025-02-12T11:29:47.975Z",
+            "__v": 0
+        },
+        "partNo": "P-4655",
+        "partDetail": "Industrial grade",
+        "installedQuantity": 32,
+        "availableQuantity": 30,
+        "createdAt": "2025-02-12T15:32:39.452Z",
+        "updatedAt": "2025-02-12T15:32:39.452Z"
+    },
+    {
+        "_id": "67acbf17c090d26940130a3c",
+        "machine": {
+            "_id": "67ac862b95ea0070635f9593",
+            "name": "Lathe",
+            "machineNo": "M-954",
+            "area": "67ac862895ea0070635f9465",
+            "createdAt": "2025-02-12T11:29:47.103Z",
+            "updatedAt": "2025-02-12T11:29:47.103Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862b95ea0070635f95f6",
+            "name": "Mitsubishi",
+            "createdAt": "2025-02-12T11:29:47.975Z",
+            "updatedAt": "2025-02-12T11:29:47.975Z",
+            "__v": 0
+        },
+        "partNo": "P-5419",
+        "partDetail": "Lightweight",
+        "installedQuantity": 39,
+        "availableQuantity": 38,
+        "createdAt": "2025-02-12T15:32:39.490Z",
+        "updatedAt": "2025-02-12T15:32:39.490Z"
+    },
+    {
+        "_id": "67acbf17c090d26940130a40",
+        "machine": {
+            "_id": "67ac862b95ea0070635f959b",
+            "name": "Milling",
+            "machineNo": "M-860",
+            "area": "67ac862995ea0070635f9467",
+            "createdAt": "2025-02-12T11:29:47.123Z",
+            "updatedAt": "2025-02-12T11:29:47.123Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862b95ea0070635f95f6",
+            "name": "Mitsubishi",
+            "createdAt": "2025-02-12T11:29:47.975Z",
+            "updatedAt": "2025-02-12T11:29:47.975Z",
+            "__v": 0
+        },
+        "partNo": "P-8449",
+        "partDetail": "Heavy-duty",
+        "installedQuantity": 22,
+        "availableQuantity": 11,
+        "createdAt": "2025-02-12T15:32:39.496Z",
+        "updatedAt": "2025-02-12T15:32:39.496Z"
+    },
+    {
+        "_id": "67acbf17c090d26940130a4e",
+        "machine": {
+            "_id": "67ac862b95ea0070635f95a1",
+            "name": "Drilling",
+            "machineNo": "M-437",
+            "area": "67ac862995ea0070635f9471",
+            "createdAt": "2025-02-12T11:29:47.146Z",
+            "updatedAt": "2025-02-12T11:29:47.146Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862b95ea0070635f95f6",
+            "name": "Mitsubishi",
+            "createdAt": "2025-02-12T11:29:47.975Z",
+            "updatedAt": "2025-02-12T11:29:47.975Z",
+            "__v": 0
+        },
+        "partNo": "P-3202",
+        "partDetail": "Lightweight",
+        "installedQuantity": 21,
+        "availableQuantity": 7,
+        "createdAt": "2025-02-12T15:32:39.536Z",
+        "updatedAt": "2025-02-12T15:32:39.536Z"
+    },
+    {
+        "_id": "67acbf18c090d26940130a5c",
+        "machine": {
+            "_id": "67ac862b95ea0070635f95b5",
+            "name": "Milling",
+            "machineNo": "M-122",
+            "area": "67ac862995ea0070635f9467",
+            "createdAt": "2025-02-12T11:29:47.195Z",
+            "updatedAt": "2025-02-12T11:29:47.195Z",
+            "__v": 0
+        },
+        "OEM": {
+            "_id": "67ac862b95ea0070635f95f6",
+            "name": "Mitsubishi",
+            "createdAt": "2025-02-12T11:29:47.975Z",
+            "updatedAt": "2025-02-12T11:29:47.975Z",
+            "__v": 0
+        },
+        "partNo": "P-2410",
+        "partDetail": "Industrial grade",
+        "installedQuantity": 2,
+        "availableQuantity": 1,
+        "createdAt": "2025-02-12T15:32:40.037Z",
+        "updatedAt": "2025-02-12T15:32:40.037Z"
+    }
+]
