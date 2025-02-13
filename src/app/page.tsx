@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import ModalDrawer from "@/components/ui/modalDrawer";
 import { useRouter } from "next/navigation";
+import axios from 'axios'; // Add this line if not already present
 
 export default function Home() {
   const { data: session, status } = useSession();
@@ -14,19 +15,16 @@ export default function Home() {
   const [filterType, setFilterType] = useState("machine"); // Default filter type
   const router = useRouter(); // Initialize router for navigation
 
+  const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+
   useEffect(() => {
     const fetchData = async () => {
       if (session) {
         setLoading(true);
         try {
-          const response = await fetch(`/api/dataaddition`, { cache: 'no-store' });
-        
-          if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-          }
-        
-          const data = await response.json();
-          setData(data);
+          await delay(5000); // Wait for 2 seconds before fetching data
+          const response = await axios.get(`/api/dataaddition`, { headers: { 'Cache-Control': 'no-store' } });
+          setData(response.data);
         } catch (err) {
           console.error("Error fetching data:", err);
         } finally {
