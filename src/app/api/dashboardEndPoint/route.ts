@@ -9,7 +9,7 @@ export async function GET() {
 
     try {
         // Area-wise Installed Machines
-        const pipeline1 = [
+        const pipeline1:any = [
             {
                 $lookup: {
                     from: Machine.collection.name,
@@ -41,7 +41,7 @@ export async function GET() {
         console.log("Area-wise Machines:", areaWiseMachines); // Log the results
 
         // Machine-wise OEM
-        const pipeline2 = [
+        const pipeline2:any = [
             {
                 $lookup: {
                     from: OEM.collection.name,
@@ -73,7 +73,7 @@ export async function GET() {
         console.log("Machine-wise OEMs:", machineWiseOEMs); // Log the results
 
         // OEM-wise Parts
-        const pipeline3 = [
+        const pipeline3:any = [
             {
                 $lookup: {
                     from: Part.collection.name,
@@ -105,7 +105,7 @@ export async function GET() {
         console.log("OEM-wise Parts:", oemWiseParts); // Log the results
 
         // Part-wise Installed Quantity
-        const pipeline4 = [
+        const pipeline4:any = [
             {
                 $group: {
                     _id: "$partNo",
