@@ -15,14 +15,11 @@ export default function Home() {
   const [filterType, setFilterType] = useState("machine"); // Default filter type
   const router = useRouter(); // Initialize router for navigation
 
-  const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
-
   useEffect(() => {
     const fetchData = async () => {
       if (session) {
         setLoading(true);
         try {
-          await delay(5000); // Wait for 2 seconds before fetching data
           const response = await axios.get(`/api/dataaddition`, { headers: { 'Cache-Control': 'no-store' } });
           setData(response.data);
         } catch (err) {
