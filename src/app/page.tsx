@@ -20,7 +20,7 @@ export default function Home() {
       if (session) {
         setLoading(true);
         try {
-          const response = await axios.get(`/api/dataaddition`, { headers: { 'Cache-Control': 'no-store' } });
+          const response = await axios.get(`/api/dataAddition`, { headers: { 'Cache-Control': 'no-store' } });
           setData(response.data);
         } catch (err) {
           console.error("Error fetching data:", err);
