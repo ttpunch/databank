@@ -20,9 +20,4 @@ export async function DeleteData(id: string) {
     }
 }
 
-export async function UpdateData(data: any, formData: {}) {
-    await connectToDatabase();
-    const res = await Part.updateOne({ _id: data._id }, data);
-    console.log(res)
-    return res
-}
+
