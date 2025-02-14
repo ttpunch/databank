@@ -1,131 +1,217 @@
 import { NextResponse } from 'next/server';
-import { connectToDatabase } from '@/app/lib/db'; // Adjust the import based on your project structure
-import Machine from '@/app/modelNew/Machine'; // Adjust the import based on your project structure
-import OEM from '@/app/modelNew/OEM'; // Adjust the import based on your project structure
-import Part from '@/app/modelNew/Part'; // Adjust the import based on your project structure
+import { connectToDatabase } from '@/app/lib/db';
+import Machine from '@/app/modelNew/Machine';
+import OEM from '@/app/modelNew/OEM';
+import Part from '@/app/modelNew/Part';
 
 export async function GET() {
-    await connectToDatabase(); // Ensure you are connected to the database
+    await connectToDatabase(); // Ensure DB connection
 
     try {
         // Area-wise Installed Machines
-        const pipeline1:any = [
+        const pipeline1: any[] = [
             {
                 $lookup: {
-                    from: Machine.collection.name,
-                    localField: 'machine',
-                    foreignField: '_id',
-                    as: 'machineDetails',
-                },
+                    from: "machines",
+                    localField: "machine",
+                    foreignField: "_id",
+                    as: "machineDetails"
+                }
             },
             {
-                $unwind: '$machineDetails' // Unwind to access fields from machineDetails
+                $unwind: {
+                    path: "$machineDetails",
+                    preserveNullAndEmptyArrays: false
+                }
             },
             {
                 $group: {
-                    _id: '$machineDetails.area', // Group by machine area
-                    totalMachines: { $addToSet: "$machineDetails._id" } // Collect unique machine IDs
+                    _id: "$machineDetails.area",
+                    totalMachines: { $addToSet: "$machineDetails._id" }
+                }
+            },
+            {
+                $lookup: {
+                    from: "areas", // Assuming "areas" is your collection with area details
+                    localField: "_id",
+                    foreignField: "_id",
+                    as: "areaDetails"
+                }
+            },
+            {
+                $unwind: {
+                    path: "$areaDetails",
+                    preserveNullAndEmptyArrays: true // Allow areas without names
                 }
             },
             {
                 $project: {
                     _id: 0,
-                    area: "$_id",
-                    totalMachines: { $size: "$totalMachines" } // Count unique machines
+                    areaId: "$_id",
+                    areaName: { $ifNull: ["$areaDetails.name", "Unknown"] }, // Fallback to "Unknown" if no name is found
+                    totalMachines: { $size: "$totalMachines" }
                 }
             },
             { $sort: { totalMachines: -1 } }
         ];
+        
+        const areaWiseMachines = await Part.aggregate(pipeline1);
+        
+        
 
-        const areaWiseMachines = await Machine.aggregate(pipeline1);
-        console.log("Area-wise Machines:", areaWiseMachines); // Log the results
-
-        // Machine-wise OEM
-        const pipeline2:any = [
+        // Machine-wise Part List
+        const pipeline2: any[] = [
             {
                 $lookup: {
-                    from: OEM.collection.name,
-                    localField: 'OEM',
-                    foreignField: '_id',
-                    as: 'oemDetails',
+                    from: "parts", // Correct collection name
+                    localField: '_id',
+                    foreignField: 'machine',
+                    as: 'parts',
                 },
             },
             {
-                $unwind: '$oemDetails' // Unwind to access fields from oemDetails
+                $unwind: "$parts"
             },
             {
                 $group: {
-                    _id: "$machineDetails.name",
-                    associatedOEMs: { $addToSet: "$oemDetails.name" } // Collect OEMs per machine
+                    _id: "$name",
+                    parts: {
+                        $push: {
+                            partNo: "$parts.partNo",
+                            partDetail: "$parts.partDetail",
+                            installedQuantity: "$parts.installedQuantity",
+                            availableQuantity: "$parts.availableQuantity"
+                        }
+                    }
                 }
             },
             {
                 $project: {
                     _id: 0,
                     machineName: "$_id",
-                    oems: "$associatedOEMs"
+                    parts: 1
                 }
             },
             { $sort: { machineName: 1 } }
         ];
 
-        const machineWiseOEMs = await Machine.aggregate(pipeline2);
-        console.log("Machine-wise OEMs:", machineWiseOEMs); // Log the results
+        const machineWiseParts = await Machine.aggregate(pipeline2);
 
-        // OEM-wise Parts
-        const pipeline3:any = [
-            {
-                $lookup: {
-                    from: Part.collection.name,
-                    localField: '_id',
-                    foreignField: 'OEM',
-                    as: 'parts'
-                }
-            },
-            {
-                $unwind: '$parts'
-            },
-            {
-                $group: {
-                    _id: '$name',
-                    parts: { $addToSet: '$parts.partNo' } // Collect parts per OEM
-                }
-            },
-            {
-                $project: {
-                    _id: 0,
-                    oemName: '$_id',
-                    parts: 1
-                }
-            },
-            { $sort: { oemName: 1 } }
-        ];
-
-        const oemWiseParts = await OEM.aggregate(pipeline3);
-        console.log("OEM-wise Parts:", oemWiseParts); // Log the results
-
-        // Part-wise Installed Quantity
-        const pipeline4:any = [
+        // Part-wise Installed and Available Quantity
+        const pipeline3: any[] = [
             {
                 $group: {
                     _id: "$partNo",
-                    totalInstalled: { $sum: "$installedQuantity" } // Sum installed quantity
+                    totalInstalled: { $sum: "$installedQuantity" },
+                    totalAvailable: { $sum: "$availableQuantity" }
                 }
             },
             {
                 $project: {
                     _id: 0,
                     partNo: "$_id",
-                    totalInstalled: 1
+                    totalInstalled: 1,
+                    totalAvailable: 1
                 }
             },
             { $sort: { totalInstalled: -1 } }
         ];
 
-        const partWiseInstalledQuantity = await Part.aggregate(pipeline4);
-        console.log("Part-wise Installed Quantity:", partWiseInstalledQuantity); // Log the results
+        const partWiseQuantities = await Part.aggregate(pipeline3);
 
-        return NextResponse.json({ areaWiseMachines, machineWiseOEMs, oemWiseParts, partWiseInstalledQuantity });
+        
+            
+        
+        const pipelineDebug: any = [
+            {
+                $lookup: {
+                    from: "machines",  // Ensure the correct collection name
+                    localField: "machine",
+                    foreignField: "_id",
+                    as: "machineDetails"
+                }
+            },
+            { $unwind: { path: "$machineDetails", preserveNullAndEmptyArrays: true } },
+        
+            {
+                $lookup: {
+                    from: "oems",
+                    localField: "OEM",
+                    foreignField: "_id",
+                    as: "oemDetails"
+                }
+            },
+            { $unwind: { path: "$oemDetails", preserveNullAndEmptyArrays: true } },
+        
+            // Lookup to get area name from areas collection
+            {
+                $lookup: {
+                    from: "areas",  // Ensure the correct collection name
+                    localField: "machineDetails.area",
+                    foreignField: "_id",
+                    as: "areaDetails"
+                }
+            },
+            { $unwind: { path: "$areaDetails", preserveNullAndEmptyArrays: true } },
+        
+            {
+                $project: {
+                    _id: 1,
+                    installedQuantity: 1,
+                    "machineDetails.area": 1,
+                    "machineDetails.name": 1, // ✅ Added machine name
+                    "oemDetails.name": 1,
+                    "areaDetails.name": 1 // ✅ Added area name
+                }
+            }
+        ];
+        
+        
+        const debugData = await Part.aggregate(pipelineDebug);
+        console.log("Debug Data After Lookup:", debugData);
+        
+        
+        const areaWiseOEMs = debugData.reduce((acc, item) => {
+            const { installedQuantity, machineDetails, oemDetails, areaDetails } = item;
+            if (!machineDetails || !oemDetails || !areaDetails) return acc; // Skip if missing data
+        
+            const area = machineDetails.area;
+            const areaName = areaDetails.name; // ✅ Use areaName instead of just ID
+            const oemName = oemDetails.name;
+        
+            // Check if area exists in accumulator
+            let areaEntry = acc.find((a: { area: string; }) => a.area === area);
+            if (!areaEntry) {
+                areaEntry = { area, areaName, OEMs: [] }; // ✅ Include areaName
+                acc.push(areaEntry);
+            }
+        
+            // Check if OEM exists in the area
+            let oemEntry = areaEntry.OEMs.find((o: { name: string; }) => o.name === oemName);
+            if (!oemEntry) {
+                oemEntry = { name: oemName, totalInstalledQuantity: 0 };
+                areaEntry.OEMs.push(oemEntry);
+            }
+        
+            // Accumulate installed quantity
+            oemEntry.totalInstalledQuantity += installedQuantity;
+        
+            return acc;
+        }, []);
+        
+        
+        console.log("areaWiseOEMs:", areaWiseOEMs);
+        
+
+
+        return NextResponse.json({
+            areaWiseMachines,
+            machineWiseParts,
+            partWiseQuantities,
+            areaWiseOEMs,
+            debugData
+        });
+
     } catch (error) {
         console.error("Error retrieving data:", error);
         return NextResponse.json({ error: "Error retrieving data" }, { status: 500 });
