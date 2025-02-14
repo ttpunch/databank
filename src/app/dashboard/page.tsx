@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from "react";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, Legend, PieChart, Pie, Cell } from "recharts";
 import axios from "axios";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 const Dashboard = () => {
     const [machinesData, setMachinesData] = useState<{ areaName: string; totalMachines: number; }[]>([]);
@@ -12,7 +14,7 @@ const Dashboard = () => {
         const fetchData = async () => {
             try {
                 const response = await axios.get('/api/dashboardEndPoint');
-                
+
                 // Transform area-wise machines data
                 const transformedMachinesData = response.data.areaWiseMachines.map((areaData: { areaName: any; totalMachines: any; }) => ({
                     areaName: areaData.areaName,
@@ -22,7 +24,7 @@ const Dashboard = () => {
                 // Process and consolidate OEM data by area
                 const consolidatedData = response.data.areaWiseOEMs.reduce((acc: { areaName: any; OEMs: any[]; }[], current: { areaName: any; OEMs: any[]; }) => {
                     const existingArea = acc.find(item => item.areaName === current.areaName);
-                    
+
                     if (existingArea) {
                         // Merge OEM data for existing area
                         current.OEMs.forEach(oem => {
@@ -85,14 +87,20 @@ const Dashboard = () => {
     const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "#A28DFF", "#FF6384"];
 
     // Get unique OEM names for bar chart
-    const uniqueOEMs = Array.from(new Set(oemData.flatMap(area => 
+    const uniqueOEMs = Array.from(new Set(oemData.flatMap(area =>
         area.OEMs.map(oem => oem.name)
     )));
 
     return (
-        <div className="p-4">
-            {/* Machines by Area */}
-            <h1 className="text-xl font-bold mb-4 text-center">Machines by Area</h1>
+        <div className="p-4 container mx-auto">
+            <div className="flex relative justify-center items-center ">{/* Home Link */}
+                <Link  className="absolute right-12" href="/">
+                    <Button>Go to Home</Button>
+                </Link>
+
+                {/* Machines by Area */}
+                <h1 className="text-xl font-bold mb-4 text-center">Machines by Area</h1>
+            </div>
             <ResponsiveContainer width="100%" height={400}>
                 <BarChart data={machinesData} layout="vertical" margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
                     <CartesianGrid strokeDasharray="3 3" />
@@ -107,9 +115,9 @@ const Dashboard = () => {
             {/* Area-wise OEM Distribution */}
             <h1 className="text-xl font-bold mt-8 mb-4 text-center">OEM Distribution by Area</h1>
             <ResponsiveContainer width="100%" height={400}>
-                <BarChart 
-                    data={oemBarChartData} 
-                    layout="vertical" 
+                <BarChart
+                    data={oemBarChartData}
+                    layout="vertical"
                     margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
                 >
                     <CartesianGrid strokeDasharray="3 3" />
@@ -118,11 +126,11 @@ const Dashboard = () => {
                     <Tooltip />
                     <Legend />
                     {uniqueOEMs.map((oem, index) => (
-                        <Bar 
-                            key={oem} 
-                            dataKey={oem} 
+                        <Bar
+                            key={oem}
+                            dataKey={oem}
                             stackId="a"
-                            fill={COLORS[index % COLORS.length]} 
+                            fill={COLORS[index % COLORS.length]}
                             name={oem}
                         />
                     ))}
@@ -142,7 +150,7 @@ const Dashboard = () => {
                         fill="#8884d8"
                         paddingAngle={5}
                         dataKey="value"
-                        label={({ name, percent }) => 
+                        label={({ name, percent }) =>
                             `${name} (${(percent * 100).toFixed(1)}%)`
                         }
                     >
@@ -176,12 +184,12 @@ const Dashboard = () => {
                                         <td className="p-2 border">{machine.areaName}</td>
                                         <td className="p-2 border text-right">{machine.totalMachines}</td>
                                         <td className="p-2 border">
-                                            {areaOEMData?.OEMs.map(oem => 
+                                            {areaOEMData?.OEMs.map(oem =>
                                                 `${oem.name}: ${oem.totalInstalledQuantity}`
                                             ).join(', ') || 'No OEM data'}
                                         </td>
                                         <td className="p-2 border text-right">
-                                            {areaOEMData?.OEMs.reduce((sum, oem) => 
+                                            {areaOEMData?.OEMs.reduce((sum, oem) =>
                                                 sum + oem.totalInstalledQuantity, 0
                                             ) || 0}
                                         </td>

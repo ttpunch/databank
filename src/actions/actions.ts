@@ -20,26 +20,9 @@ export async function DeleteData(id: string) {
     }
 }
 
-export async function UpdateData(id: string, data: any) {
-    const res = await fetch(`https://cncdata-git-main-ttpunchs-projects.vercel.app/api/dataAddition/${id}`, {
-        method: 'PUT', // Change to PUT method
-        headers: {
-            'Content-Type': 'application/json', // Set the content type if needed
-        },
-        body: JSON.stringify(data), // Stringify the data to send
-    });
-    console.log(res);
-    return res.json();
-}
-
-export async function CreateData(data: any) {
-    const res = await fetch(`https://cncdata-git-main-ttpunchs-projects.vercel.app/api/dataAddition`, {
-        method: 'POST', // Change to PUT method
-        headers: {
-            'Content-Type': 'application/json', // Set the content type if needed
-        },
-        body: JSON.stringify(data), // Stringify the data to send
-    });
-    console.log(res);
-    return res.json();
+export async function UpdateData(data: any, formData: {}) {
+    await connectToDatabase();
+    const res = await Part.updateOne({ _id: data._id }, data);
+    console.log(res)
+    return res
 }
