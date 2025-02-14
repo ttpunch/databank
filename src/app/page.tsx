@@ -6,8 +6,13 @@ import { useEffect, useState } from "react";
 import ModalDrawer from "@/components/ui/modalDrawer";
 import { useRouter } from "next/navigation";
 import axios from 'axios'; // Add this line if not already present
+import { DeleteData } from "@/actions/actions";
+import { useToast } from "@/hooks/use-toast"
+
+
 
 export default function Home() {
+  const { toast } = useToast()
   const { data: session, status } = useSession();
   const [data, setData] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
@@ -65,6 +70,22 @@ export default function Home() {
     return false;
   });
 
+  const handleDelete = async (id: string) => {
+    try {
+        const response: any = await DeleteData(id);
+        if (response) {
+            toast({ title: "Success", description: response.message });
+            // Update local state to remove the deleted item
+            setData(prevData => prevData.filter(item => item._id !== id));
+        } else {
+            toast({ title: "Error", description: "Failed to delete data." });
+        }
+    } catch (error) {
+        console.error("Error deleting data:", error);
+        toast({ title: "Error", description: "An error occurred while deleting data." });
+    }
+};
+
   return (
     <div className="min-h-screen flex flex-col items-center bg-gray-900 text-white p-6 scroll-smooth">
       <div className="w-full max-w-4xl mt-16 mb-8">
@@ -103,6 +124,7 @@ export default function Home() {
                   <th className="py-3 px-4 border-b border-gray-700 text-left text-xs font-semibold text-white uppercase tracking-wider">Part Detail</th>
                   <th className="py-3 px-4 border-b border-gray-700 text-left text-xs font-semibold text-white uppercase tracking-wider">Installed Qty</th>
                   <th className="py-3 px-4 border-b border-gray-700 text-left text-xs font-semibold text-white uppercase tracking-wider">Available Qty</th>
+                  <th className="py-3 px-4 border-b border-gray-700 text-left text-xs font-semibold text-white uppercase tracking-wider">Actions</th>
                 </tr>
               </thead>
               <tbody>
@@ -115,11 +137,19 @@ export default function Home() {
                       <td className="py-3 px-4 border-b border-gray-700">{part.partDetail}</td>
                       <td className="py-3 px-4 border-b border-gray-700">{part.installedQuantity}</td>
                       <td className="py-3 px-4 border-b border-gray-700">{part.availableQuantity}</td>
+                      <td className="py-3 px-4 border-b border-gray-700">
+                        <Button 
+                          onClick={() => handleDelete(part._id)} 
+                          className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded transition-colors duration-200"
+                        >
+                          Delete
+                        </Button>
+                      </td>
                     </tr>
                   ))
                 ) : (
                   <tr>
-                    <td colSpan={6} className="py-4 px-4 text-center text-gray-400">No data available</td>
+                    <td colSpan={7} className="py-4 px-4 text-center text-gray-400">No data available</td>
                   </tr>
                 )}
               </tbody>
