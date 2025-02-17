@@ -4,6 +4,7 @@ import { useToast } from "@/hooks/use-toast"; // Import the useToast hook
 import { Button } from "@/components/ui/button"; // Adjust the import based on your button component
 import { Input } from "@/components/ui/input"; // Adjust the import based on your input component
 import { Card, CardContent } from "@/components/ui/card"; // Adjust the import based on your card component
+import Link from 'next/link';
 
 const UploadPage: React.FC = () => {
   const [file, setFile] = useState<File | null>(null);
@@ -83,7 +84,9 @@ const UploadPage: React.FC = () => {
               {isUploading ? 'Uploading...' : 'Upload'}
             </Button>
           </form>
+          <Link className="block text-center mt-4 text-black hover:text-slate-400 underline" href="sample.csv">Download Sample CSV</Link>
         </CardContent>
+        
       </Card>
     </div>
   );

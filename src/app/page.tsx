@@ -9,6 +9,7 @@ import axios from 'axios'; // Add this line if not already present
 import { DeleteData } from "@/actions/actions";
 import { useToast } from "@/hooks/use-toast"
 import { Upload, UploadIcon } from "lucide-react"
+import Link from "next/link";
 
 
 
@@ -163,6 +164,7 @@ export default function Home() {
             onClick={() => router.push('/upload')} // Navigate to upload page
             className="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded transition duration-200"
           >
+          
              
              <UploadIcon className="w-4 h-4 mr-2" />Upload File
           </Button>
