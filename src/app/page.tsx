@@ -28,6 +28,7 @@ export default function Home() {
         setLoading(true);
         try {
           const response = await axios.get(`/api/dataAddition`, { headers: { 'Cache-Control': 'no-store' } });
+          console.log(response.data);
           setData(response.data);
         } catch (err) {
           console.error("Error fetching data:", err);
@@ -121,6 +122,7 @@ export default function Home() {
               <thead className="bg-gradient-to-r from-blue-500 to-purple-600 sticky top-0 z-10">
                 <tr>
                   <th className="py-3 px-4 border-b border-gray-700 text-left text-xs font-semibold text-white uppercase tracking-wider">Machine</th>
+                  <th className="py-3 px-4 border-b border-gray-700 text-left text-xs font-semibold text-white uppercase tracking-wider">Machine No</th>
                   <th className="py-3 px-4 border-b border-gray-700 text-left text-xs font-semibold text-white uppercase tracking-wider">OEM</th>
                   <th className="py-3 px-4 border-b border-gray-700 text-left text-xs font-semibold text-white uppercase tracking-wider">Part No</th>
                   <th className="py-3 px-4 border-b border-gray-700 text-left text-xs font-semibold text-white uppercase tracking-wider">Part Detail</th>
@@ -134,6 +136,7 @@ export default function Home() {
                   filteredData.map((part, index) => (
                     <tr key={`${part._id}-${index}`} className="hover:bg-gray-700/50 transition-colors duration-200">
                       <td className="py-3 px-4 border-b border-gray-700">{part.machine.name}</td>
+                      <td className="py-3 px-4 border-b border-gray-700">{part.machine.machineNo}</td>
                       <td className="py-3 px-4 border-b border-gray-700">{part.OEM.name}</td>
                       <td className="py-3 px-4 border-b border-gray-700">{part.partNo}</td>
                       <td className="py-3 px-4 border-b border-gray-700">{part.partDetail}</td>
