@@ -10,7 +10,11 @@ export default function Register() {
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
     const [role, setRole] = useState("user");
+    const [area, setArea] = useState(""); // Add area state
     const router = useRouter();
+
+    // Predefined areas
+    const areas = ["EM-FBM-DABG", "TURBINE", "NBS", "CNCLAB"];
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -20,11 +24,16 @@ export default function Register() {
             return;
         }
 
+        if (!area) {
+            alert("Please select an area");
+            return;
+        }
+
         try {
             const res = await fetch("/api/auth/register", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ name, email, password, role }),
+                body: JSON.stringify({ name, email, password, role, area }),
             });
 
             const data = await res.json();
@@ -55,7 +64,7 @@ export default function Register() {
                             onChange={(e) => setName(e.target.value)}
                             required
                             placeholder="John Doe"
-                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
                         />
                     </div>
                     <div>
@@ -67,7 +76,7 @@ export default function Register() {
                             onChange={(e) => setEmail(e.target.value)}
                             required
                             placeholder="example@mail.com"
-                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
                         />
                     </div>
                     <div>
@@ -79,7 +88,7 @@ export default function Register() {
                             onChange={(e) => setPassword(e.target.value)}
                             required
                             placeholder="********"
-                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
                         />
                     </div>
                     <div>
@@ -91,8 +100,25 @@ export default function Register() {
                             onChange={(e) => setConfirmPassword(e.target.value)}
                             required
                             placeholder="********"
-                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
                         />
+                    </div>
+                    <div>
+                        <label htmlFor="area" className="block text-sm font-medium text-gray-700 mb-1">Area</label>
+                        <select
+                            id="area"
+                            value={area}
+                            onChange={(e) => setArea(e.target.value)}
+                            required={role === "user"}
+                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
+                        >
+                            <option value="">Select Area</option>
+                            {areas.map((areaOption) => (
+                                <option key={areaOption} value={areaOption}>
+                                    {areaOption}
+                                </option>
+                            ))}
+                        </select>
                     </div>
                     <div>
                         <label htmlFor="role" className="block text-sm font-medium text-gray-700 mb-1">Role</label>
@@ -101,7 +127,7 @@ export default function Register() {
                             value={role}
                             onChange={(e) => setRole(e.target.value)}
                             required
-                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
                         >
                             <option value="user">User</option>
                             <option value="admin">Admin</option>

@@ -1,16 +1,18 @@
 import { NextRequest, NextResponse } from "next/server";
 import { connectToDatabase } from "@/app/lib/db";
 import User from "@/app/modelNew/User";
+import Area from "@/app/modelNew/Area"; // Add this import
 import bcrypt from "bcryptjs";
+import mongoose from "mongoose";
 
 export async function POST(request: NextRequest) {
   try {
-    const { name, email, password, role, areas } = await request.json();
+    const { name, email, password, role, area } = await request.json();
 
     // 🔹 Basic Validations
-    if (!name || !email || !password || !role) {
+    if (!name || !email || !password || !role || (role === "user" && !area)) {
       return NextResponse.json(
-        { error: "Name, email, password, and role are required" },
+        { error: "Name, email, password, role, and area (for users) are required" },
         { status: 400 }
       );
     }
@@ -40,6 +42,19 @@ export async function POST(request: NextRequest) {
 
     await connectToDatabase();
 
+    // 🔹 Validate and get Area if role is user
+    let areaDoc;
+    if (role === "user") {
+      // Find area by name
+      areaDoc = await Area.findOne({ name: area.trim().toUpperCase() });
+      if (!areaDoc) {
+        return NextResponse.json(
+          { error: "Invalid area. Please select a valid area." },
+          { status: 400 }
+        );
+      }
+    }
+
     // 🔹 Check if user already exists
     const existingUser = await User.findOne({ email: email.toLowerCase() }).lean();
     if (existingUser) {
@@ -49,16 +64,13 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // 🔹 Hash Password
-    const hashedPassword = await bcrypt.hash(password, 10);
-
     // 🔹 Create New User
     const newUser = await User.create({
       name,
-      email: email.toLowerCase(), // Normalize email storage
-      password: hashedPassword,
+      email: email.toLowerCase(),
+      password, // Pass the plain password - model will hash it
       role,
-      areas: Array.isArray(areas) ? areas : [], // Ensure areas is an array
+      area: role === "user" ? areaDoc._id : undefined // Use the area document's ID
     });
 
     return NextResponse.json(

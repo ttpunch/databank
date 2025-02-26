@@ -18,14 +18,23 @@ export const authOptions: NextAuthOptions = {
         }
 
         await connectToDatabase();
-        const user = await UserModel.findOne({ email: credentials.email });
+        const user = await UserModel.findOne({ email: credentials.email.toLowerCase() });
 
         if (!user) throw new Error("No user found");
 
+        // Add debug logging
+        console.log('Attempting password comparison');
         const isValid = await bcrypt.compare(credentials.password, user.password);
+        console.log('Password comparison result:', isValid);
+
         if (!isValid) throw new Error("Invalid password");
 
-        return { id: user._id.toString(), email: user.email, name: user.name, role: user.role };
+        return { 
+          id: user._id.toString(), 
+          email: user.email, 
+          name: user.name, 
+          role: user.role 
+        };
       },
     }),
   ],
